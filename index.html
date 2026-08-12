@@ -1,2597 +1,1253 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gokul Krishnan N — Product Portfolio</title>
-  <meta name="description"
-    content="Gokul Krishnan N — Product Analyst, Associate Product Manager, Business Analyst. Chennai, India. Two Indian consumer-tech product case studies you can operate, not just read.">
-  <meta name="theme-color" content="#15120D">
-  <meta property="og:title" content="Gokul Krishnan N — Product Portfolio">
-  <meta property="og:description"
-    content="Two Indian consumer-tech product case studies you can operate, not just read.">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
-  <style>
-    :root {
-      /* sampled directly from the reference templates */
-      --dark: #15120D;
-      --dark-2: #212121;
-      --dark-3: #1C1A16;
-      --light: #F9F9F9;
-      --light-2: #EFEFEF;
-      --white: #FFFFFF;
-
-      --g-deep: #064E2B;
-      --g-mid: #0C8340;
-      --g-bright: #12A651;
-      --g-mint: #34D17E;
-      --g-pale: #90E0B8;
-
-      --grad: linear-gradient(135deg, #064E2B 0%, #0C8340 55%, #34D17E 100%);
-      --grad-soft: linear-gradient(135deg, #0C8340 0%, #90E0B8 100%);
-
-      --txt-dark: #15120D;
-      --txt-dim: #5A5A56;
-      --txt-light: #F2F2F0;
-      --txt-light-dim: #A8A8A2;
-      --line-dark: #2A2721;
-      --line-light: #E2E2E0;
-
-      --zomato: #FF5A5F;
-      --blinkit: #34D17E;
-      --loss: #FF6B6B;
-
-      --display: 'Archivo', sans-serif;
-      --body: 'Inter', sans-serif;
-      --mono: 'JetBrains Mono', monospace;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    html {
-      scroll-behavior: smooth
-    }
-
-    @media (prefers-reduced-motion:reduce) {
-      html {
-        scroll-behavior: auto
-      }
-
-      * {
-        animation: none !important;
-        transition: none !important
-      }
-    }
-
-    body {
-      background: var(--dark);
-      color: var(--txt-light);
-      font-family: var(--body);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit
-    }
-
-    img {
-      max-width: 100%;
-      display: block
-    }
-
-    ::selection {
-      background: var(--g-mint);
-      color: var(--dark)
-    }
-
-    :focus-visible {
-      outline: 2px solid var(--g-mint);
-      outline-offset: 3px;
-      border-radius: 4px
-    }
-
-    .shell {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 0 44px
-    }
-
-    @media(max-width:768px) {
-      .shell {
-        padding: 0 22px
-      }
-    }
-
-    /* ---------- signature: gradient pill ---------- */
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--grad);
-      color: #fff;
-      font-family: var(--body);
-      font-size: 12.5px;
-      font-weight: 600;
-      letter-spacing: .06em;
-      padding: 9px 20px;
-      border-radius: 100px;
-      white-space: nowrap
-    }
-
-    .pill-sm {
-      display: block;
-      width: 56px;
-      height: 17px;
-      border-radius: 100px;
-      background: var(--grad)
-    }
-
-    .pill-dot {
-      position: absolute;
-      width: 20px;
-      height: 56px;
-      border-radius: 100px;
-      background: var(--grad);
-      opacity: .9
-    }
-
-    /* ---------- signature: two-tone heading ---------- */
-    .h-sec {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: clamp(2.1rem, 5.2vw, 3.6rem);
-      line-height: .98;
-      letter-spacing: -.035em;
-      text-transform: uppercase
-    }
-
-    .h-sec .b {
-      display: block
-    }
-
-    .h-sec .g {
-      display: block;
-      color: var(--g-bright)
-    }
-
-    section.dark .h-sec {
-      color: var(--white)
-    }
-
-    section.light .h-sec {
-      color: var(--txt-dark)
-    }
-
-    section.dark .h-sec .g,
-    section.light .h-sec .g {
-      color: var(--g-bright)
-    }
-
-    /* ---------- signature: gradient block ---------- */
-    .gblock {
-      position: absolute;
-      border-radius: 28px;
-      background: var(--grad-soft);
-      z-index: 0
-    }
-
-    /* ---------- nav ---------- */
-    header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 90;
-      transition: background .3s, border-color .3s, padding .3s;
-      border-bottom: 1px solid transparent;
-      padding: 18px 0
-    }
-
-    header.stuck {
-      background: rgba(21, 18, 13, .92);
-      backdrop-filter: blur(14px);
-      border-bottom-color: var(--line-dark);
-      padding: 12px 0
-    }
-
-    header .bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px
-    }
-
-    .logo {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 19px;
-      letter-spacing: -.02em;
-      color: #fff
-    }
-
-    .logo i {
-      color: var(--g-bright);
-      font-style: normal
-    }
-
-    nav.desk {
-      display: flex;
-      gap: 4px
-    }
-
-    nav.desk a {
-      font-size: 13.5px;
-      color: var(--txt-light-dim);
-      padding: 8px 15px;
-      border-radius: 100px;
-      transition: .22s
-    }
-
-    nav.desk a:hover {
-      color: #fff
-    }
-
-    nav.desk a.on {
-      color: #fff;
-      background: rgba(255, 255, 255, .09)
-    }
-
-    #burger {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--line-dark);
-      border-radius: 50%;
-      background: none;
-      color: #fff;
-      cursor: pointer;
-      align-items: center;
-      justify-content: center
-    }
-
-    @media(max-width:940px) {
-
-      nav.desk,
-      .nav-cta {
-        display: none
-      }
-
-      #burger {
-        display: flex
-      }
-    }
-
-    #drawer {
-      position: fixed;
-      inset: 0;
-      z-index: 95;
-      background: rgba(21, 18, 13, .98);
-      backdrop-filter: blur(16px);
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 34px;
-      gap: 2px
-    }
-
-    #drawer.open {
-      display: flex
-    }
-
-    #drawer a {
-      font-family: var(--display);
-      font-weight: 700;
-      font-size: 26px;
-      text-transform: uppercase;
-      color: #fff;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--line-dark);
-      letter-spacing: -.02em
-    }
-
-    #drawer a span {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--g-bright);
-      margin-right: 14px;
-      text-transform: none
-    }
-
-    #drawer .pill {
-      margin-top: 26px;
-      justify-content: center;
-      padding: 14px
-    }
-
-    /* ---------- sections ---------- */
-    section {
-      position: relative;
-      overflow: hidden
-    }
-
-    section.dark {
-      background: var(--dark);
-      color: var(--txt-light)
-    }
-
-    section.dark.alt {
-      background: var(--dark-2)
-    }
-
-    section.light {
-      background: var(--light);
-      color: var(--txt-dim)
-    }
-
-    .pad {
-      padding: 110px 0
-    }
-
-    @media(max-width:768px) {
-      .pad {
-        padding: 72px 0
-      }
-    }
-
-    .eyebrow {
-      font-family: var(--body);
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: .34em;
-      text-transform: uppercase;
-      margin-bottom: 18px
-    }
-
-    section.dark .eyebrow {
-      color: var(--white)
-    }
-
-    section.light .eyebrow {
-      color: var(--txt-dark)
-    }
-
-    .lede {
-      font-size: 15.5px;
-      max-width: 62ch;
-      margin-top: 22px;
-      line-height: 1.75
-    }
-
-    section.dark .lede {
-      color: var(--txt-light-dim)
-    }
-
-    section.light .lede {
-      color: var(--txt-dim)
-    }
-
-    /* ---------- HERO ---------- */
-    .hero {
-      padding: 150px 0 100px
-    }
-
-    @media(max-width:768px) {
-      .hero {
-        padding: 118px 0 70px
-      }
-    }
-
-    .hero-top {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 66px
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 56px;
-      align-items: center
-    }
-
-    @media(max-width:940px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 48px
-      }
-
-      .hero-top {
-        margin-bottom: 40px
-      }
-    }
-
-    .hero h1 {
-      font-family: var(--display);
-      font-weight: 900;
-      font-size: clamp(2.75rem, 8.2vw, 5.9rem);
-      line-height: .9;
-      letter-spacing: -.045em;
-      text-transform: uppercase;
-      color: #fff
-    }
-
-    .hero h1 .g {
-      display: block;
-      color: var(--g-bright)
-    }
-
-    .hero .role {
-      font-family: var(--mono);
-      font-size: 13px;
-      color: var(--g-mint);
-      margin-top: 26px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-height: 24px
-    }
-
-    .hero .role::before {
-      content: "";
-      width: 30px;
-      height: 1px;
-      background: var(--g-bright);
-      flex: none
-    }
-
-    .hero .thesis {
-      font-family: var(--display);
-      font-weight: 600;
-      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-      line-height: 1.3;
-      letter-spacing: -.02em;
-      color: #fff;
-      max-width: 26ch;
-      margin-top: 22px
-    }
-
-    .hero .thesis em {
-      font-style: normal;
-      color: var(--g-bright)
-    }
-
-    .hero p.intro {
-      font-size: 14.5px;
-      color: var(--txt-light-dim);
-      max-width: 52ch;
-      margin-top: 20px;
-      line-height: 1.8
-    }
-
-    .hero .acts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 14px 28px;
-      border-radius: 100px;
-      transition: transform .25s, opacity .25s, background .25s, color .25s
-    }
-
-    .btn-fill {
-      background: var(--grad);
-      color: #fff
-    }
-
-    .btn-fill:hover {
-      transform: translateY(-2px);
-      opacity: .94
-    }
-
-    .btn-out {
-      border: 1.5px solid rgba(255, 255, 255, .24);
-      color: #fff
-    }
-
-    .btn-out:hover {
-      border-color: var(--g-bright);
-      color: var(--g-bright);
-      transform: translateY(-2px)
-    }
-
-    .btn-dark {
-      border: 1.5px solid rgba(21, 18, 13, .2);
-      color: var(--txt-dark)
-    }
-
-    .btn-dark:hover {
-      border-color: var(--g-mid);
-      color: var(--g-mid);
-      transform: translateY(-2px)
-    }
-
-    /* photo composition — mirrors the template's stacked-card layout */
-    .shot {
-      position: relative;
-      min-height: 520px
-    }
-
-    .shot .gblock {
-      width: 76%;
-      height: 84%;
-      right: 0;
-      top: 8%
-    }
-
-    .shot figure {
-      position: relative;
-      z-index: 2;
-      width: 82%;
-      aspect-ratio: 4/5;
-      border-radius: 28px;
-      overflow: hidden;
-      background: var(--dark-3);
-      border: 1px solid rgba(52, 209, 126, .22);
-      box-shadow: 0 30px 70px -28px rgba(0, 0, 0, .85);
-      display: flex;
-      align-items: center;
-      justify-content: center
-    }
-
-    .shot figure::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(200deg, rgba(52, 209, 126, .10) 0%, transparent 42%);
-    }
-
-    .shot figure img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 8%
-    }
-
-    .shot .ini {
-      font-family: var(--display);
-      font-weight: 900;
-      font-size: 6rem;
-      color: var(--g-bright);
-      letter-spacing: -.04em
-    }
-
-    .shot .tagcard {
-      position: absolute;
-      z-index: 3;
-      right: 0;
-      bottom: 4%;
-      background: var(--grad);
-      border-radius: 22px;
-      padding: 20px 26px;
-      max-width: 255px;
-      box-shadow: 0 22px 48px -18px rgba(0, 0, 0, .8)
-    }
-
-    .shot .tagcard b {
-      display: block;
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 16px;
-      color: #fff
-    }
-
-    .shot .tagcard span {
-      font-size: 13px;
-      color: rgba(255, 255, 255, .86);
-      line-height: 1.5
-    }
-
-    @media(max-width:940px) {
-      .shot {
-        min-height: 400px;
-        max-width: 480px
-      }
-    }
-
-    /* Mobile: the absolute-positioned composition has no room to breathe —
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokul Krishnan N — Product Portfolio</title>
+<meta name="description" content="Gokul Krishnan N — Product Analyst, Associate Product Manager, Business Analyst. Chennai, India. Two Indian consumer-tech product case studies you can operate, not just read.">
+<meta name="theme-color" content="#15120D">
+<meta property="og:title" content="Gokul Krishnan N — Product Portfolio">
+<meta property="og:description" content="Two Indian consumer-tech product case studies you can operate, not just read.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* sampled directly from the reference templates */
+  --dark:#15120D;
+  --dark-2:#212121;
+  --dark-3:#1C1A16;
+  --light:#F9F9F9;
+  --light-2:#EFEFEF;
+  --white:#FFFFFF;
+
+  --g-deep:#064E2B;
+  --g-mid:#0C8340;
+  --g-bright:#12A651;
+  --g-mint:#34D17E;
+  --g-pale:#90E0B8;
+
+  --grad:linear-gradient(135deg,#064E2B 0%,#0C8340 55%,#34D17E 100%);
+  --grad-soft:linear-gradient(135deg,#0C8340 0%,#90E0B8 100%);
+
+  --txt-dark:#15120D;
+  --txt-dim:#5A5A56;
+  --txt-light:#F2F2F0;
+  --txt-light-dim:#A8A8A2;
+  --line-dark:#2A2721;
+  --line-light:#E2E2E0;
+
+  --zomato:#FF5A5F;
+  --blinkit:#34D17E;
+  --loss:#FF6B6B;
+
+  --display:'Archivo',sans-serif;
+  --body:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--dark);color:var(--txt-light);font-family:var(--body);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--g-mint);color:var(--dark)}
+:focus-visible{outline:2px solid var(--g-mint);outline-offset:3px;border-radius:4px}
+
+.shell{max-width:1320px;margin:0 auto;padding:0 44px}
+@media(max-width:768px){.shell{padding:0 22px}}
+
+/* ---------- signature: gradient pill ---------- */
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;
+  font-family:var(--body);font-size:12.5px;font-weight:600;letter-spacing:.06em;
+  padding:9px 20px;border-radius:100px;white-space:nowrap}
+.pill-sm{display:block;width:56px;height:17px;border-radius:100px;background:var(--grad)}
+.pill-dot{position:absolute;width:20px;height:56px;border-radius:100px;background:var(--grad);opacity:.9}
+
+/* ---------- signature: two-tone heading ---------- */
+.h-sec{font-family:var(--display);font-weight:800;font-size:clamp(2.1rem,5.2vw,3.6rem);
+  line-height:.98;letter-spacing:-.035em;text-transform:uppercase}
+.h-sec .b{display:block}
+.h-sec .g{display:block;color:var(--g-bright)}
+section.dark .h-sec{color:var(--white)}
+section.light .h-sec{color:var(--txt-dark)}
+section.dark .h-sec .g,section.light .h-sec .g{color:var(--g-bright)}
+
+/* ---------- signature: gradient block ---------- */
+.gblock{position:absolute;border-radius:28px;background:var(--grad-soft);z-index:0}
+
+/* ---------- nav ---------- */
+header{position:fixed;inset:0 0 auto;z-index:90;transition:background .3s,border-color .3s,padding .3s;
+  border-bottom:1px solid transparent;padding:18px 0}
+header.stuck{background:rgba(21,18,13,.92);backdrop-filter:blur(14px);border-bottom-color:var(--line-dark);padding:12px 0}
+header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em;color:#fff}
+.logo i{color:var(--g-bright);font-style:normal}
+nav.desk{display:flex;gap:4px}
+nav.desk a{font-size:13.5px;color:var(--txt-light-dim);padding:8px 15px;border-radius:100px;transition:.22s}
+nav.desk a:hover{color:#fff}
+nav.desk a.on{color:#fff;background:rgba(255,255,255,.09)}
+#burger{display:none;width:42px;height:42px;border:1px solid var(--line-dark);border-radius:50%;
+  background:none;color:#fff;cursor:pointer;align-items:center;justify-content:center}
+@media(max-width:940px){nav.desk,.nav-cta{display:none}#burger{display:flex}}
+#drawer{position:fixed;inset:0;z-index:95;background:rgba(21,18,13,.98);backdrop-filter:blur(16px);
+  display:none;flex-direction:column;justify-content:center;padding:0 34px;gap:2px}
+#drawer.open{display:flex}
+#drawer a{font-family:var(--display);font-weight:700;font-size:26px;text-transform:uppercase;
+  color:#fff;padding:15px 0;border-bottom:1px solid var(--line-dark);letter-spacing:-.02em}
+#drawer a span{font-family:var(--mono);font-size:12px;color:var(--g-bright);margin-right:14px;text-transform:none}
+#drawer .pill{margin-top:26px;justify-content:center;padding:14px}
+
+/* ---------- sections ---------- */
+section{position:relative;overflow:hidden}
+section.dark{background:var(--dark);color:var(--txt-light)}
+section.dark.alt{background:var(--dark-2)}
+section.light{background:var(--light);color:var(--txt-dim)}
+.pad{padding:110px 0}
+@media(max-width:768px){.pad{padding:72px 0}}
+.eyebrow{font-family:var(--body);font-size:11.5px;font-weight:600;letter-spacing:.34em;
+  text-transform:uppercase;margin-bottom:18px}
+section.dark .eyebrow{color:var(--white)}
+section.light .eyebrow{color:var(--txt-dark)}
+.lede{font-size:15.5px;max-width:62ch;margin-top:22px;line-height:1.75}
+section.dark .lede{color:var(--txt-light-dim)}
+section.light .lede{color:var(--txt-dim)}
+
+/* ---------- HERO ---------- */
+.hero{padding:150px 0 100px}
+@media(max-width:768px){.hero{padding:118px 0 70px}}
+.hero-top{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:66px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-top{margin-bottom:40px}}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(2.75rem,8.2vw,5.9rem);
+  line-height:.9;letter-spacing:-.045em;text-transform:uppercase;color:#fff}
+.hero h1 .g{display:block;color:var(--g-bright)}
+.hero .role{font-family:var(--mono);font-size:13px;color:var(--g-mint);margin-top:26px;
+  display:flex;align-items:center;gap:12px;min-height:24px}
+.hero .role::before{content:"";width:30px;height:1px;background:var(--g-bright);flex:none}
+.hero .thesis{font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,2.2vw,1.5rem);
+  line-height:1.3;letter-spacing:-.02em;color:#fff;max-width:26ch;margin-top:22px}
+.hero .thesis em{font-style:normal;color:var(--g-bright)}
+.hero p.intro{font-size:14.5px;color:var(--txt-light-dim);max-width:52ch;margin-top:20px;line-height:1.8}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;
+  padding:14px 28px;border-radius:100px;transition:transform .25s,opacity .25s,background .25s,color .25s}
+.btn-fill{background:var(--grad);color:#fff}
+.btn-fill:hover{transform:translateY(-2px);opacity:.94}
+.btn-out{border:1.5px solid rgba(255,255,255,.24);color:#fff}
+.btn-out:hover{border-color:var(--g-bright);color:var(--g-bright);transform:translateY(-2px)}
+.btn-dark{border:1.5px solid rgba(21,18,13,.2);color:var(--txt-dark)}
+.btn-dark:hover{border-color:var(--g-mid);color:var(--g-mid);transform:translateY(-2px)}
+
+/* photo composition — mirrors the template's stacked-card layout */
+.shot{position:relative;min-height:520px}
+.shot .gblock{width:76%;height:84%;right:0;top:8%}
+.shot figure{position:relative;z-index:2;width:82%;aspect-ratio:4/5;border-radius:28px;overflow:hidden;
+  background:var(--dark-3);border:1px solid rgba(52,209,126,.22);box-shadow:0 30px 70px -28px rgba(0,0,0,.85);
+  display:flex;align-items:center;justify-content:center}
+.shot figure::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(200deg,rgba(52,209,126,.10) 0%,transparent 42%);}
+.shot figure img{width:100%;height:100%;object-fit:cover;object-position:center 8%}
+.shot .ini{font-family:var(--display);font-weight:900;font-size:6rem;color:var(--g-bright);letter-spacing:-.04em}
+.shot .tagcard{position:absolute;z-index:3;right:0;bottom:4%;background:var(--grad);
+  border-radius:22px;padding:20px 26px;max-width:255px;box-shadow:0 22px 48px -18px rgba(0,0,0,.8)}
+.shot .tagcard b{display:block;font-family:var(--display);font-weight:800;font-size:16px;color:#fff}
+.shot .tagcard span{font-size:13px;color:rgba(255,255,255,.86);line-height:1.5}
+@media(max-width:940px){.shot{min-height:400px;max-width:480px}}
+
+/* Mobile: the absolute-positioned composition has no room to breathe —
    stack it cleanly instead so nothing overlaps or clips off-screen. */
-    @media(max-width:600px) {
-      .shot {
-        min-height: 0;
-        max-width: none;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch
-      }
-
-      .shot .gblock {
-        display: none
-      }
-
-      .shot figure {
-        width: 100%;
-        max-width: 340px;
-        margin: 0 auto;
-        aspect-ratio: 4/5;
-        border-radius: 24px
-      }
-
-      .shot .ini {
-        font-size: 4.4rem
-      }
-
-      .shot .tagcard {
-        position: static;
-        width: 100%;
-        max-width: 340px;
-        margin: -30px auto 0;
-        padding: 20px 24px;
-        border-radius: 20px;
-        text-align: center;
-        z-index: 4
-      }
-
-      .shot .tagcard b {
-        font-size: 15px
-      }
-
-      .shot .tagcard span {
-        font-size: 12.5px
-      }
-    }
-
-    /* ---------- ABOUT ---------- */
-    .about-grid {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 60px;
-      align-items: start;
-      margin-top: 12px
-    }
-
-    @media(max-width:940px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 34px
-      }
-    }
-
-    .about-card {
-      position: relative;
-      background: var(--grad);
-      border-radius: 26px;
-      padding: 34px;
-      color: #fff
-    }
-
-    .about-card p {
-      font-size: 14.5px;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, .94)
-    }
-
-    .about-card .pill-sm {
-      background: rgba(255, 255, 255, .35);
-      margin-bottom: 18px
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 34px
-    }
-
-    @media(max-width:560px) {
-      .stats {
-        grid-template-columns: 1fr
-      }
-    }
-
-    .stat {
-      background: var(--white);
-      border: 1px solid var(--line-light);
-      border-radius: 20px;
-      padding: 24px
-    }
-
-    .stat b {
-      display: block;
-      font-family: var(--display);
-      font-weight: 900;
-      font-size: 2rem;
-      color: var(--g-mid);
-      letter-spacing: -.03em
-    }
-
-    .stat span {
-      font-size: 11.5px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--txt-dim);
-      margin-top: 6px;
-      display: block
-    }
-
-    /* ---------- CASE STUDIES ---------- */
-    .cs {
-      position: relative;
-      background: var(--dark-3);
-      border: 1px solid var(--line-dark);
-      border-radius: 30px;
-      overflow: hidden;
-      margin-bottom: 26px
-    }
-
-    .cs-head {
-      padding: 38px;
-      display: grid;
-      grid-template-columns: 1fr 232px;
-      gap: 36px
-    }
-
-    @media(max-width:940px) {
-      .cs-head {
-        grid-template-columns: 1fr;
-        gap: 26px;
-        padding: 26px
-      }
-    }
-
-    .cs-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      padding: 7px 15px;
-      border-radius: 100px;
-      margin-bottom: 18px
-    }
-
-    .cs.z .cs-badge {
-      color: var(--zomato);
-      background: rgba(255, 90, 95, .11);
-      border: 1px solid rgba(255, 90, 95, .28)
-    }
-
-    .cs.b .cs-badge {
-      color: var(--blinkit);
-      background: rgba(52, 209, 126, .11);
-      border: 1px solid rgba(52, 209, 126, .28)
-    }
-
-    .cs-badge i {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      display: block
-    }
-
-    .cs.z .cs-badge i {
-      background: var(--zomato)
-    }
-
-    .cs.b .cs-badge i {
-      background: var(--blinkit)
-    }
-
-    .cs h3 {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: clamp(1.5rem, 3.2vw, 2.2rem);
-      line-height: 1.08;
-      letter-spacing: -.03em;
-      text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 15px
-    }
-
-    .cs p.sum {
-      font-size: 14.5px;
-      color: var(--txt-light-dim);
-      max-width: 58ch;
-      line-height: 1.8
-    }
-
-    .cs .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 22px
-    }
-
-    .cs .tags span {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--txt-light-dim);
-      padding: 6px 12px;
-      border-radius: 7px;
-      background: rgba(255, 255, 255, .05);
-      border: 1px solid var(--line-dark)
-    }
-
-    .cs-facts {
-      display: flex;
-      flex-direction: column;
-      gap: 19px;
-      padding-left: 30px;
-      border-left: 1px solid var(--line-dark)
-    }
-
-    @media(max-width:940px) {
-      .cs-facts {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 24px;
-        padding: 22px 0 0;
-        border-left: none;
-        border-top: 1px solid var(--line-dark)
-      }
-    }
-
-    .cs-facts dt {
-      font-family: var(--mono);
-      font-size: 9.5px;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-      color: var(--txt-light-dim)
-    }
-
-    .cs-facts dd {
-      font-size: 14.5px;
-      font-weight: 600;
-      color: #fff;
-      margin-top: 4px;
-      line-height: 1.3
-    }
-
-    .cs.z .cs-facts .hl dd {
-      color: var(--zomato)
-    }
-
-    .cs.b .cs-facts .hl dd {
-      color: var(--blinkit)
-    }
-
-    .cs-demo {
-      padding: 34px 38px;
-      background: rgba(0, 0, 0, .24);
-      border-top: 1px solid var(--line-dark)
-    }
-
-    @media(max-width:940px) {
-      .cs-demo {
-        padding: 26px
-      }
-    }
-
-    .demo-lab {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--g-mint);
-      margin-bottom: 20px
-    }
-
-    .demo-lab i {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--g-mint);
-      box-shadow: 0 0 0 3px rgba(52, 209, 126, .2);
-      display: block
-    }
-
-    .point {
-      font-size: 13.5px;
-      color: var(--txt-light-dim);
-      margin-top: 20px;
-      line-height: 1.75
-    }
-
-    .point b {
-      color: #fff;
-      font-weight: 600
-    }
-
-    .cs-foot {
-      padding: 24px 38px;
-      border-top: 1px solid var(--line-dark);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap
-    }
-
-    @media(max-width:940px) {
-      .cs-foot {
-        padding: 22px 26px
-      }
-    }
-
-    .cs-foot .scope {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--txt-light-dim)
-    }
-
-    /* mood demo */
-    .tiles {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px
-    }
-
-    .tiles button {
-      font-family: var(--body);
-      font-size: 13px;
-      font-weight: 500;
-      padding: 10px 17px;
-      border-radius: 100px;
-      border: 1px solid var(--line-dark);
-      background: rgba(255, 255, 255, .04);
-      color: var(--txt-light-dim);
-      cursor: pointer;
-      transition: .22s
-    }
-
-    .tiles button:hover {
-      border-color: var(--zomato);
-      color: var(--zomato)
-    }
-
-    .tiles button[aria-pressed="true"] {
-      background: var(--zomato);
-      border-color: var(--zomato);
-      color: var(--dark);
-      font-weight: 600
-    }
-
-    .res {
-      border: 1px solid var(--line-dark);
-      border-radius: 18px;
-      overflow: hidden;
-      background: rgba(255, 255, 255, .03)
-    }
-
-    .res .rh {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 20px;
-      border-bottom: 1px solid var(--line-dark);
-      font-size: 13.5px;
-      font-weight: 600;
-      color: #fff
-    }
-
-    .res .rh em {
-      font-style: normal;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--txt-light-dim);
-      font-weight: 400
-    }
-
-    .res .r {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 13px 20px;
-      border-bottom: 1px solid var(--line-dark);
-      font-size: 13.5px;
-      color: var(--txt-light)
-    }
-
-    .res .r:last-child {
-      border-bottom: none
-    }
-
-    .res .r em {
-      font-style: normal;
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--txt-light-dim);
-      white-space: nowrap
-    }
-
-    /* economics demo */
-    .calc {
-      display: grid;
-      grid-template-columns: 1fr 250px;
-      gap: 30px;
-      align-items: start
-    }
-
-    @media(max-width:820px) {
-      .calc {
-        grid-template-columns: 1fr;
-        gap: 24px
-      }
-    }
-
-    .ctrl {
-      margin-bottom: 24px
-    }
-
-    .ctrl:last-child {
-      margin-bottom: 0
-    }
-
-    .ctrl .cr {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 14px;
-      margin-bottom: 11px
-    }
-
-    .ctrl label {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: #fff
-    }
-
-    .ctrl .cv {
-      font-family: var(--mono);
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--g-mint)
-    }
-
-    input[type=range] {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 3px;
-      border-radius: 3px;
-      background: var(--line-dark);
-      outline: none
-    }
-
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: var(--g-mint);
-      cursor: pointer;
-      border: 3px solid var(--dark-3)
-    }
-
-    input[type=range]::-moz-range-thumb {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--g-mint);
-      cursor: pointer;
-      border: 3px solid var(--dark-3)
-    }
-
-    .ctrl .cd {
-      font-size: 11.5px;
-      color: var(--txt-light-dim);
-      margin-top: 10px;
-      line-height: 1.6
-    }
-
-    .verdict {
-      border-radius: 22px;
-      padding: 24px;
-      transition: background .35s
-    }
-
-    .verdict.up {
-      background: var(--grad)
-    }
-
-    .verdict.down {
-      background: linear-gradient(135deg, #7D2620, #C0392B)
-    }
-
-    .verdict .vk {
-      font-family: var(--mono);
-      font-size: 9.5px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, .8)
-    }
-
-    .verdict .vn {
-      font-family: var(--display);
-      font-weight: 900;
-      font-size: 2.5rem;
-      line-height: 1;
-      letter-spacing: -.035em;
-      color: #fff;
-      margin: 9px 0 6px
-    }
-
-    .verdict .vs {
-      font-size: 12.5px;
-      color: rgba(255, 255, 255, .94);
-      line-height: 1.45
-    }
-
-    .be {
-      margin-top: 17px;
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--txt-light-dim);
-      line-height: 1.6
-    }
-
-    .be b {
-      color: #fff
-    }
-
-    .bebar {
-      height: 6px;
-      border-radius: 4px;
-      background: var(--line-dark);
-      margin-top: 9px;
-      position: relative;
-      overflow: hidden
-    }
-
-    .bebar .f {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      border-radius: 4px;
-      transition: width .3s, background .3s
-    }
-
-    .bebar .m {
-      position: absolute;
-      top: -3px;
-      width: 2px;
-      height: 12px;
-      background: #fff
-    }
-
-    /* ---------- APPROACH ---------- */
-    .principles {
-      margin-top: 44px;
-      border-top: 1px solid var(--line-light)
-    }
-
-    .prin {
-      display: grid;
-      grid-template-columns: 64px 1fr 1.5fr;
-      gap: 28px;
-      padding: 26px 0;
-      border-bottom: 1px solid var(--line-light);
-      align-items: start;
-      transition: .25s
-    }
-
-    .prin:hover {
-      padding-left: 12px
-    }
-
-    @media(max-width:768px) {
-      .prin {
-        grid-template-columns: 1fr;
-        gap: 8px;
-        padding: 22px 0
-      }
-
-      .prin:hover {
-        padding-left: 0
-      }
-    }
-
-    .prin .n {
-      font-family: var(--mono);
-      font-size: 13px;
-      color: var(--g-mid);
-      font-weight: 500
-    }
-
-    .prin h4 {
-      font-family: var(--display);
-      font-weight: 700;
-      font-size: 17px;
-      color: var(--txt-dark);
-      letter-spacing: -.01em
-    }
-
-    .prin p {
-      font-size: 14px;
-      line-height: 1.75;
-      color: var(--txt-dim)
-    }
-
-    .fw-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
-      gap: 16px;
-      margin-top: 26px
-    }
-
-    .fw {
-      background: var(--white);
-      border: 1px solid var(--line-light);
-      border-radius: 22px;
-      padding: 26px;
-      transition: .28s
-    }
-
-    .fw:hover {
-      transform: translateY(-4px);
-      border-color: var(--g-mid);
-      box-shadow: 0 18px 40px -22px rgba(12, 131, 64, .5)
-    }
-
-    .fw .ft {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px
-    }
-
-    .fw h4 {
-      font-family: var(--display);
-      font-weight: 700;
-      font-size: 16.5px;
-      color: var(--txt-dark);
-      letter-spacing: -.015em;
-      line-height: 1.25
-    }
-
-    .fw .where {
-      font-family: var(--mono);
-      font-size: 9.5px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--g-mid);
-      border: 1px solid rgba(12, 131, 64, .32);
-      border-radius: 100px;
-      padding: 4px 10px;
-      white-space: nowrap
-    }
-
-    .fw p {
-      font-size: 13.5px;
-      line-height: 1.7;
-      color: var(--txt-dim)
-    }
-
-    /* ---------- EXPERIENCE ---------- */
-    .tl {
-      position: relative;
-      padding-left: 36px;
-      margin-top: 44px
-    }
-
-    .tl::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 14px;
-      bottom: 14px;
-      width: 2px;
-      background: linear-gradient(180deg, var(--g-bright), var(--line-dark) 24%, var(--line-dark))
-    }
-
-    @media(max-width:560px) {
-      .tl {
-        padding-left: 26px
-      }
-    }
-
-    .job {
-      position: relative;
-      margin-bottom: 18px
-    }
-
-    .job:last-child {
-      margin-bottom: 0
-    }
-
-    .job::before {
-      content: "";
-      position: absolute;
-      left: -36px;
-      top: 32px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--dark);
-      border: 2px solid var(--line-dark)
-    }
-
-    .job.now::before {
-      background: var(--g-bright);
-      border-color: var(--g-bright);
-      box-shadow: 0 0 0 5px rgba(18, 166, 81, .2)
-    }
-
-    @media(max-width:560px) {
-      .job::before {
-        left: -26px
-      }
-    }
-
-    .job-card {
-      background: var(--dark-3);
-      border: 1px solid var(--line-dark);
-      border-radius: 24px;
-      padding: 30px 32px;
-      transition: .28s
-    }
-
-    .job-card:hover {
-      border-color: rgba(52, 209, 126, .4);
-      transform: translateX(5px)
-    }
-
-    @media(max-width:560px) {
-      .job-card {
-        padding: 22px
-      }
-    }
-
-    .job-card .jt {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 5px
-    }
-
-    .job-card h4 {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 20px;
-      text-transform: uppercase;
-      letter-spacing: -.02em;
-      color: #fff
-    }
-
-    .job-card .when {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 100px;
-      border: 1px solid var(--line-dark);
-      color: var(--txt-light-dim);
-      white-space: nowrap
-    }
-
-    .job.now .job-card .when {
-      background: var(--grad);
-      border-color: transparent;
-      color: #fff
-    }
-
-    .job-card .org {
-      font-size: 13.5px;
-      color: var(--g-mint);
-      font-weight: 500;
-      margin-bottom: 18px
-    }
-
-    .job-card ul {
-      list-style: none
-    }
-
-    .job-card li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 11px;
-      font-size: 14px;
-      color: var(--txt-light-dim);
-      line-height: 1.75;
-      max-width: 72ch
-    }
-
-    .job-card li:last-child {
-      margin-bottom: 0
-    }
-
-    .job-card li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 11px;
-      width: 9px;
-      height: 2px;
-      background: var(--g-bright)
-    }
-
-    /* ---------- SKILLS ---------- */
-    .sk-group {
-      margin-bottom: 34px
-    }
-
-    .sk-group:last-child {
-      margin-bottom: 0
-    }
-
-    .sk-h {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 18px
-    }
-
-    .sk-h b {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--txt-dim);
-      font-weight: 500
-    }
-
-    .sk-h i {
-      flex: 1;
-      height: 1px;
-      background: var(--line-light);
-      display: block
-    }
-
-    .sk-h em {
-      font-style: normal;
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--txt-dim)
-    }
-
-    .sk-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px
-    }
-
-    .sk {
-      background: var(--white);
-      border: 1px solid var(--line-light);
-      border-radius: 14px;
-      padding: 13px 18px;
-      font-size: 13.5px;
-      color: var(--txt-dim);
-      transition: .24s
-    }
-
-    .sk:hover {
-      transform: translateY(-3px);
-      border-color: var(--g-mid);
-      color: var(--txt-dark)
-    }
-
-    .sk.core {
-      background: var(--grad);
-      border-color: transparent;
-      color: #fff;
-      font-weight: 600
-    }
-
-    .sk.core em {
-      font-style: normal;
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      opacity: .82;
-      margin-left: 8px
-    }
-
-    /* ---------- EDUCATION ---------- */
-    .edu-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 52px;
-      margin-top: 44px
-    }
-
-    @media(max-width:940px) {
-      .edu-grid {
-        grid-template-columns: 1fr;
-        gap: 38px
-      }
-    }
-
-    .erow {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 18px;
-      flex-wrap: wrap;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--line-dark)
-    }
-
-    .erow:first-of-type {
-      padding-top: 0
-    }
-
-    .erow b {
-      display: block;
-      font-size: 15px;
-      color: #fff;
-      font-weight: 600;
-      line-height: 1.4
-    }
-
-    .erow span {
-      display: block;
-      font-size: 13px;
-      color: var(--txt-light-dim);
-      margin-top: 4px
-    }
-
-    .erow .yr {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--g-mint);
-      white-space: nowrap
-    }
-
-    .cert {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: var(--dark-3);
-      border: 1px solid var(--line-dark);
-      border-radius: 20px;
-      padding: 22px;
-      margin-top: 22px
-    }
-
-    .cert .tick {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--grad);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      flex: none
-    }
-
-    .proj {
-      background: var(--dark-3);
-      border: 1px solid var(--line-dark);
-      border-radius: 22px;
-      padding: 24px 26px;
-      margin-bottom: 14px;
-      transition: .28s
-    }
-
-    .proj:hover {
-      transform: translateY(-4px);
-      border-color: rgba(52, 209, 126, .4)
-    }
-
-    .proj:last-child {
-      margin-bottom: 0
-    }
-
-    .proj b {
-      font-family: var(--display);
-      font-weight: 700;
-      font-size: 16.5px;
-      color: #fff;
-      letter-spacing: -.01em
-    }
-
-    .proj p {
-      font-size: 13.5px;
-      color: var(--txt-light-dim);
-      margin-top: 7px;
-      line-height: 1.7
-    }
-
-    .proj .stack {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--g-mint);
-      margin-top: 14px;
-      letter-spacing: .03em
-    }
-
-    /* ---------- CONTACT ---------- */
-    .contact {
-      text-align: center;
-      position: relative
-    }
-
-    .contact .h-sec {
-      margin: 0 auto
-    }
-
-    .contact p.lede {
-      margin: 24px auto 0;
-      text-align: center
-    }
-
-    .clist {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 11px;
-      margin-top: 38px
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: var(--dark);
-      border-top: 1px solid var(--line-dark);
-      padding: 52px 0 34px
-    }
-
-    .fg {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 44px;
-      margin-bottom: 36px
-    }
-
-    @media(max-width:768px) {
-      .fg {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px
-      }
-    }
-
-    .fg .fn {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 19px;
-      color: #fff
-    }
-
-    .fg .fn i {
-      color: var(--g-bright);
-      font-style: normal
-    }
-
-    .fg p {
-      font-size: 13px;
-      color: var(--txt-light-dim);
-      margin-top: 10px;
-      max-width: 34ch;
-      line-height: 1.7
-    }
-
-    .fg h5 {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--txt-light-dim);
-      margin-bottom: 15px;
-      font-weight: 500
-    }
-
-    .fg a {
-      display: block;
-      font-size: 13.5px;
-      color: var(--txt-light-dim);
-      margin-bottom: 10px;
-      transition: .2s
-    }
-
-    .fg a:hover {
-      color: var(--g-mint)
-    }
-
-    .fbase {
-      border-top: 1px solid var(--line-dark);
-      padding-top: 24px
-    }
-
-    .fbase p {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--txt-light-dim);
-      line-height: 1.75;
-      max-width: 76ch
-    }
-
-    /* reveal */
-    .rv {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .6s cubic-bezier(.21, .62, .35, 1), transform .6s cubic-bezier(.21, .62, .35, 1)
-    }
-
-    .rv.in {
-      opacity: 1;
-      transform: none
-    }
-
-    @media (prefers-reduced-motion:reduce) {
-      .rv {
-        opacity: 1;
-        transform: none
-      }
-    }
-
-    /* ============================================================
+@media(max-width:600px){
+  .shot{min-height:0;max-width:none;display:flex;flex-direction:column;align-items:stretch}
+  .shot .gblock{display:none}
+  .shot figure{width:100%;max-width:340px;margin:0 auto;aspect-ratio:4/5;border-radius:24px}
+  .shot .ini{font-size:4.4rem}
+  .shot .tagcard{position:static;width:100%;max-width:340px;margin:-30px auto 0;
+    padding:20px 24px;border-radius:20px;text-align:center;z-index:4}
+  .shot .tagcard b{font-size:15px}
+  .shot .tagcard span{font-size:12.5px}
+}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:start;margin-top:12px}
+@media(max-width:940px){.about-grid{grid-template-columns:1fr;gap:34px}}
+.about-card{position:relative;background:var(--grad);border-radius:26px;padding:34px;color:#fff}
+.about-card p{font-size:14.5px;line-height:1.8;color:rgba(255,255,255,.94)}
+.about-card .pill-sm{background:rgba(255,255,255,.35);margin-bottom:18px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+@media(max-width:560px){.stats{grid-template-columns:1fr}}
+.stat{background:var(--white);border:1px solid var(--line-light);border-radius:20px;padding:24px}
+.stat b{display:block;font-family:var(--display);font-weight:900;font-size:2rem;color:var(--g-mid);letter-spacing:-.03em}
+.stat span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-dim);margin-top:6px;display:block}
+
+/* ---------- CASE STUDIES ---------- */
+.cs{position:relative;background:var(--dark-3);border:1px solid var(--line-dark);
+  border-radius:30px;overflow:hidden;margin-bottom:26px}
+.cs-head{padding:38px;display:grid;grid-template-columns:1fr 232px;gap:36px}
+@media(max-width:940px){.cs-head{grid-template-columns:1fr;gap:26px;padding:26px}}
+.cs-badge{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.15em;text-transform:uppercase;padding:7px 15px;border-radius:100px;margin-bottom:18px}
+.cs.z .cs-badge{color:var(--zomato);background:rgba(255,90,95,.11);border:1px solid rgba(255,90,95,.28)}
+.cs.b .cs-badge{color:var(--blinkit);background:rgba(52,209,126,.11);border:1px solid rgba(52,209,126,.28)}
+.cs-badge i{width:7px;height:7px;border-radius:50%;display:block}
+.cs.z .cs-badge i{background:var(--zomato)}
+.cs.b .cs-badge i{background:var(--blinkit)}
+.cs h3{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.2vw,2.2rem);
+  line-height:1.08;letter-spacing:-.03em;text-transform:uppercase;color:#fff;margin-bottom:15px}
+.cs p.sum{font-size:14.5px;color:var(--txt-light-dim);max-width:58ch;line-height:1.8}
+.cs .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.cs .tags span{font-family:var(--mono);font-size:10.5px;color:var(--txt-light-dim);
+  padding:6px 12px;border-radius:7px;background:rgba(255,255,255,.05);border:1px solid var(--line-dark)}
+.cs-facts{display:flex;flex-direction:column;gap:19px;padding-left:30px;border-left:1px solid var(--line-dark)}
+@media(max-width:940px){.cs-facts{flex-direction:row;flex-wrap:wrap;gap:24px;padding:22px 0 0;border-left:none;border-top:1px solid var(--line-dark)}}
+.cs-facts dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--txt-light-dim)}
+.cs-facts dd{font-size:14.5px;font-weight:600;color:#fff;margin-top:4px;line-height:1.3}
+.cs.z .cs-facts .hl dd{color:var(--zomato)}
+.cs.b .cs-facts .hl dd{color:var(--blinkit)}
+
+.cs-demo{padding:34px 38px;background:rgba(0,0,0,.24);border-top:1px solid var(--line-dark)}
+@media(max-width:940px){.cs-demo{padding:26px}}
+.demo-lab{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--g-mint);margin-bottom:20px}
+.demo-lab i{width:6px;height:6px;border-radius:50%;background:var(--g-mint);
+  box-shadow:0 0 0 3px rgba(52,209,126,.2);display:block}
+.point{font-size:13.5px;color:var(--txt-light-dim);margin-top:20px;line-height:1.75}
+.point b{color:#fff;font-weight:600}
+.cs-foot{padding:24px 38px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;
+  align-items:center;gap:16px;flex-wrap:wrap}
+@media(max-width:940px){.cs-foot{padding:22px 26px}}
+.cs-foot .scope{font-family:var(--mono);font-size:11px;color:var(--txt-light-dim)}
+
+/* mood demo */
+.tiles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tiles button{font-family:var(--body);font-size:13px;font-weight:500;padding:10px 17px;border-radius:100px;
+  border:1px solid var(--line-dark);background:rgba(255,255,255,.04);color:var(--txt-light-dim);cursor:pointer;transition:.22s}
+.tiles button:hover{border-color:var(--zomato);color:var(--zomato)}
+.tiles button[aria-pressed="true"]{background:var(--zomato);border-color:var(--zomato);color:var(--dark);font-weight:600}
+.res{border:1px solid var(--line-dark);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.03)}
+.res .rh{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 20px;
+  border-bottom:1px solid var(--line-dark);font-size:13.5px;font-weight:600;color:#fff}
+.res .rh em{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--txt-light-dim);font-weight:400}
+.res .r{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 20px;
+  border-bottom:1px solid var(--line-dark);font-size:13.5px;color:var(--txt-light)}
+.res .r:last-child{border-bottom:none}
+.res .r em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--txt-light-dim);white-space:nowrap}
+
+/* economics demo */
+.calc{display:grid;grid-template-columns:1fr 250px;gap:30px;align-items:start}
+@media(max-width:820px){.calc{grid-template-columns:1fr;gap:24px}}
+.ctrl{margin-bottom:24px}
+.ctrl:last-child{margin-bottom:0}
+.ctrl .cr{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:11px}
+.ctrl label{font-size:13.5px;font-weight:500;color:#fff}
+.ctrl .cv{font-family:var(--mono);font-size:14px;font-weight:500;color:var(--g-mint)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:3px;border-radius:3px;
+  background:var(--line-dark);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+  background:var(--g-mint);cursor:pointer;border:3px solid var(--dark-3)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;
+  background:var(--g-mint);cursor:pointer;border:3px solid var(--dark-3)}
+.ctrl .cd{font-size:11.5px;color:var(--txt-light-dim);margin-top:10px;line-height:1.6}
+.verdict{border-radius:22px;padding:24px;transition:background .35s}
+.verdict.up{background:var(--grad)}
+.verdict.down{background:linear-gradient(135deg,#7D2620,#C0392B)}
+.verdict .vk{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.verdict .vn{font-family:var(--display);font-weight:900;font-size:2.5rem;line-height:1;
+  letter-spacing:-.035em;color:#fff;margin:9px 0 6px}
+.verdict .vs{font-size:12.5px;color:rgba(255,255,255,.94);line-height:1.45}
+.be{margin-top:17px;font-family:var(--mono);font-size:11px;color:var(--txt-light-dim);line-height:1.6}
+.be b{color:#fff}
+.bebar{height:6px;border-radius:4px;background:var(--line-dark);margin-top:9px;position:relative;overflow:hidden}
+.bebar .f{position:absolute;top:0;bottom:0;left:0;border-radius:4px;transition:width .3s,background .3s}
+.bebar .m{position:absolute;top:-3px;width:2px;height:12px;background:#fff}
+
+/* ---------- APPROACH ---------- */
+.principles{margin-top:44px;border-top:1px solid var(--line-light)}
+.prin{display:grid;grid-template-columns:64px 1fr 1.5fr;gap:28px;padding:26px 0;
+  border-bottom:1px solid var(--line-light);align-items:start;transition:.25s}
+.prin:hover{padding-left:12px}
+@media(max-width:768px){.prin{grid-template-columns:1fr;gap:8px;padding:22px 0}.prin:hover{padding-left:0}}
+.prin .n{font-family:var(--mono);font-size:13px;color:var(--g-mid);font-weight:500}
+.prin h4{font-family:var(--display);font-weight:700;font-size:17px;color:var(--txt-dark);letter-spacing:-.01em}
+.prin p{font-size:14px;line-height:1.75;color:var(--txt-dim)}
+.fw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-top:26px}
+.fw{background:var(--white);border:1px solid var(--line-light);border-radius:22px;padding:26px;transition:.28s}
+.fw:hover{transform:translateY(-4px);border-color:var(--g-mid);box-shadow:0 18px 40px -22px rgba(12,131,64,.5)}
+.fw .ft{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.fw h4{font-family:var(--display);font-weight:700;font-size:16.5px;color:var(--txt-dark);
+  letter-spacing:-.015em;line-height:1.25}
+.fw .where{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--g-mid);border:1px solid rgba(12,131,64,.32);border-radius:100px;padding:4px 10px;white-space:nowrap}
+.fw p{font-size:13.5px;line-height:1.7;color:var(--txt-dim)}
+
+/* ---------- EXPERIENCE ---------- */
+.tl{position:relative;padding-left:36px;margin-top:44px}
+.tl::before{content:"";position:absolute;left:6px;top:14px;bottom:14px;width:2px;
+  background:linear-gradient(180deg,var(--g-bright),var(--line-dark) 24%,var(--line-dark))}
+@media(max-width:560px){.tl{padding-left:26px}}
+.job{position:relative;margin-bottom:18px}
+.job:last-child{margin-bottom:0}
+.job::before{content:"";position:absolute;left:-36px;top:32px;width:14px;height:14px;border-radius:50%;
+  background:var(--dark);border:2px solid var(--line-dark)}
+.job.now::before{background:var(--g-bright);border-color:var(--g-bright);box-shadow:0 0 0 5px rgba(18,166,81,.2)}
+@media(max-width:560px){.job::before{left:-26px}}
+.job-card{background:var(--dark-3);border:1px solid var(--line-dark);border-radius:24px;padding:30px 32px;transition:.28s}
+.job-card:hover{border-color:rgba(52,209,126,.4);transform:translateX(5px)}
+@media(max-width:560px){.job-card{padding:22px}}
+.job-card .jt{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:5px}
+.job-card h4{font-family:var(--display);font-weight:800;font-size:20px;text-transform:uppercase;
+  letter-spacing:-.02em;color:#fff}
+.job-card .when{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  padding:6px 14px;border-radius:100px;border:1px solid var(--line-dark);color:var(--txt-light-dim);white-space:nowrap}
+.job.now .job-card .when{background:var(--grad);border-color:transparent;color:#fff}
+.job-card .org{font-size:13.5px;color:var(--g-mint);font-weight:500;margin-bottom:18px}
+.job-card ul{list-style:none}
+.job-card li{position:relative;padding-left:20px;margin-bottom:11px;font-size:14px;
+  color:var(--txt-light-dim);line-height:1.75;max-width:72ch}
+.job-card li:last-child{margin-bottom:0}
+.job-card li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:2px;background:var(--g-bright)}
+
+/* ---------- SKILLS ---------- */
+.sk-group{margin-bottom:34px}
+.sk-group:last-child{margin-bottom:0}
+.sk-h{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.sk-h b{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--txt-dim);font-weight:500}
+.sk-h i{flex:1;height:1px;background:var(--line-light);display:block}
+.sk-h em{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--txt-dim)}
+.sk-grid{display:flex;flex-wrap:wrap;gap:10px}
+.sk{background:var(--white);border:1px solid var(--line-light);border-radius:14px;padding:13px 18px;
+  font-size:13.5px;color:var(--txt-dim);transition:.24s}
+.sk:hover{transform:translateY(-3px);border-color:var(--g-mid);color:var(--txt-dark)}
+.sk.core{background:var(--grad);border-color:transparent;color:#fff;font-weight:600}
+.sk.core em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;opacity:.82;margin-left:8px}
+
+/* ---------- EDUCATION ---------- */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:44px}
+@media(max-width:940px){.edu-grid{grid-template-columns:1fr;gap:38px}}
+.erow{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;
+  padding:20px 0;border-bottom:1px solid var(--line-dark)}
+.erow:first-of-type{padding-top:0}
+.erow b{display:block;font-size:15px;color:#fff;font-weight:600;line-height:1.4}
+.erow span{display:block;font-size:13px;color:var(--txt-light-dim);margin-top:4px}
+.erow .yr{font-family:var(--mono);font-size:11px;color:var(--g-mint);white-space:nowrap}
+.cert{display:flex;gap:16px;align-items:flex-start;background:var(--dark-3);
+  border:1px solid var(--line-dark);border-radius:20px;padding:22px;margin-top:22px}
+.cert .tick{width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:14px;flex:none}
+.proj{background:var(--dark-3);border:1px solid var(--line-dark);border-radius:22px;
+  padding:24px 26px;margin-bottom:14px;transition:.28s}
+.proj:hover{transform:translateY(-4px);border-color:rgba(52,209,126,.4)}
+.proj:last-child{margin-bottom:0}
+.proj b{font-family:var(--display);font-weight:700;font-size:16.5px;color:#fff;letter-spacing:-.01em}
+.proj p{font-size:13.5px;color:var(--txt-light-dim);margin-top:7px;line-height:1.7}
+.proj .stack{font-family:var(--mono);font-size:10.5px;color:var(--g-mint);margin-top:14px;letter-spacing:.03em}
+
+/* ---------- CONTACT ---------- */
+.contact{text-align:center;position:relative}
+.contact .h-sec{margin:0 auto}
+.contact p.lede{margin:24px auto 0;text-align:center}
+.clist{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin-top:38px}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--dark);border-top:1px solid var(--line-dark);padding:52px 0 34px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:36px}
+@media(max-width:768px){.fg{grid-template-columns:1fr 1fr;gap:30px}}
+.fg .fn{font-family:var(--display);font-weight:800;font-size:19px;color:#fff}
+.fg .fn i{color:var(--g-bright);font-style:normal}
+.fg p{font-size:13px;color:var(--txt-light-dim);margin-top:10px;max-width:34ch;line-height:1.7}
+.fg h5{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--txt-light-dim);margin-bottom:15px;font-weight:500}
+.fg a{display:block;font-size:13.5px;color:var(--txt-light-dim);margin-bottom:10px;transition:.2s}
+.fg a:hover{color:var(--g-mint)}
+.fbase{border-top:1px solid var(--line-dark);padding-top:24px}
+.fbase p{font-family:var(--mono);font-size:10.5px;color:var(--txt-light-dim);line-height:1.75;max-width:76ch}
+
+/* ---------- demo intro (both demos) ---------- */
+.demo-intro {
+font-size: 14px;
+color: var(--txt-light-dim);
+line-height: 1.75;
+max-width: 62ch;
+margin-bottom: 22px
+}
+.demo-intro b {
+color: #fff;
+font-weight: 600
+}
+.demo-cue {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-size: 12.5px;
+font-weight: 600;
+color: var(--g-mint);
+background: rgba(52, 209, 126, .1);
+border: 1px solid rgba(52, 209, 126, .26);
+border-radius: 100px;
+padding: 7px 15px;
+margin-bottom: 18px
+}
+.cs.z .demo-cue {
+color: var(--zomato);
+background: rgba(255, 90, 95, .1);
+border-color: rgba(255, 90, 95, .26)
+}
+/* ---------- Zomato: search-first demo ---------- */
+.sbar {
+display: flex;
+align-items: center;
+gap: 12px;
+background: rgba(255, 255, 255, .05);
+border: 1px solid var(--line-dark);
+border-radius: 100px;
+padding: 14px 20px;
+margin-bottom: 14px
+}
+.sbar svg {
+flex: none;
+opacity: .5
+}
+.sbar .q {
+font-size: 14.5px;
+color: #fff;
+line-height: 1.4
+}
+.sbar .cursor {
+display: inline-block;
+width: 2px;
+height: 1.05em;
+background: var(--zomato);
+vertical-align: -.16em;
+margin-left: 2px;
+animation: blink .8s steps(1) infinite
+}
+@keyframes blink {
+50% {
+opacity: 0
+}
+}
+.qchips {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 22px
+}
+.qchips button {
+font-family: var(--body);
+font-size: 12.5px;
+padding: 9px 15px;
+border-radius: 100px;
+border: 1px solid var(--line-dark);
+background: rgba(255, 255, 255, .04);
+color: var(--txt-light-dim);
+cursor: pointer;
+transition: .22s;
+text-align: left
+}
+.qchips button:hover {
+border-color: var(--zomato);
+color: var(--zomato)
+}
+.qchips button[aria-pressed="true"] {
+background: var(--zomato);
+border-color: var(--zomato);
+color: var(--dark);
+font-weight: 600
+}
+.parsed {
+border: 1px solid rgba(255, 90, 95, .3);
+background: rgba(255, 90, 95, .07);
+border-radius: 16px;
+padding: 16px 20px;
+margin-bottom: 16px
+}
+.parsed .plab {
+font-family: var(--mono);
+font-size: 9.5px;
+letter-spacing: .17em;
+text-transform: uppercase;
+color: var(--zomato);
+margin-bottom: 9px
+}
+.parsed .ptags {
+display: flex;
+flex-wrap: wrap;
+gap: 7px
+}
+.parsed .ptags span {
+font-size: 12.5px;
+font-weight: 500;
+color: #fff;
+background: rgba(255, 90, 95, .18);
+border: 1px solid rgba(255, 90, 95, .3);
+border-radius: 7px;
+padding: 5px 11px
+}
+.parsed .ptags span.neg {
+background: rgba(255, 255, 255, .05);
+border-color: var(--line-dark);
+color: var(--txt-light-dim);
+text-decoration: line-through
+}
+.fallback {
+margin: 26px 0 14px;
+padding-top: 22px;
+border-top: 1px dashed var(--line-dark);
+font-size: 13.5px;
+color: var(--txt-light-dim)
+}
+.fallback b {
+color: #fff;
+font-weight: 600
+}
+/* ---------- Blinkit: clearer labels + scale line ---------- */
+.ctrl label .plain {
+display: block;
+font-size: 13.5px;
+font-weight: 600;
+color: #fff;
+line-height: 1.4
+}
+.ctrl label .term {
+display: inline-block;
+font-family: var(--mono);
+font-size: 9.5px;
+letter-spacing: .12em;
+text-transform: uppercase;
+color: var(--txt-light-dim);
+border: 1px solid var(--line-dark);
+border-radius: 100px;
+padding: 3px 9px;
+margin-top: 6px
+}
+.scale {
+margin-top: 14px;
+padding: 13px 16px;
+border-radius: 14px;
+background: rgba(255, 255, 255, .04);
+border: 1px solid var(--line-dark);
+font-size: 12.5px;
+color: var(--txt-light-dim);
+line-height: 1.6
+}
+.scale b {
+display: block;
+font-family: var(--display);
+font-weight: 800;
+font-size: 1.35rem;
+color: #fff;
+letter-spacing: -.02em;
+margin-bottom: 2px
+}
+@media(max-width:600px) {
+.qchips button {
+flex: 1 1 100%
+}
+.sbar {
+padding: 13px 16px
+}
+.sbar .q {
+font-size: 13.5px
+}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.21,.62,.35,1),transform .6s cubic-bezier(.21,.62,.35,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+
+/* ============================================================
    TOUCH & SMALL-SCREEN REFINEMENTS
    ============================================================ */
 
-    /* sliders: 3px rail is unusable on touch — enlarge hit area without changing looks */
-    @media(hover:none), (pointer:coarse), (max-width:1180px) {
-      input[type=range] {
-        height: 44px;
-        background: transparent;
-        padding: 0
-      }
+/* sliders: 3px rail is unusable on touch — enlarge hit area without changing looks */
+@media(hover:none),(pointer:coarse),(max-width:1180px){
+  input[type=range]{height:44px;background:transparent;padding:0}
+  input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:var(--line-dark)}
+  input[type=range]::-moz-range-track{height:4px;border-radius:4px;background:var(--line-dark)}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;margin-top:-11px;
+    border-radius:50%;background:var(--g-mint);border:4px solid var(--dark-3);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;
+    background:var(--g-mint);border:4px solid var(--dark-3);cursor:pointer}
+}
 
-      input[type=range]::-webkit-slider-runnable-track {
-        height: 4px;
-        border-radius: 4px;
-        background: var(--line-dark)
-      }
+@media(hover:none),(pointer:coarse),(max-width:1180px){
+  /* mood tiles reach the 44px comfort target */
+  .tiles button{padding:13px 18px;font-size:13.5px}
+  /* footer links get real tappable rows */
+  .fg a{padding:11px 0;margin-bottom:2px}
+  .logo{padding:6px 0}
+  nav.desk a{padding:11px 15px}
+  .nav-cta{padding:12px 22px}
+}
 
-      input[type=range]::-moz-range-track {
-        height: 4px;
-        border-radius: 4px;
-        background: var(--line-dark)
-      }
+@media(max-width:768px){
+  .pad{padding:64px 0}
+  .hero{padding:104px 0 60px}
+  /* headline gets breathing room on narrow screens */
+  .hero h1{font-size:clamp(2.6rem,12.5vw,4rem);line-height:.94}
+  .h-sec{font-size:clamp(1.85rem,7.6vw,2.6rem)}
+  .lede{font-size:15px;margin-top:18px}
+  .hero .thesis{font-size:1.22rem;max-width:none}
+  .hero p.intro{font-size:14px;max-width:none}
+  /* buttons go full width so they're easy to hit and read */
+  .acts,.clist{gap:10px}
+  .acts .btn,.clist .btn{flex:1 1 100%;justify-content:center;padding:15px 24px}
+  .cs-foot .btn{flex:1 1 100%;justify-content:center}
+  .cs-foot{gap:14px}
+  .cs-head,.cs-demo{padding:24px 20px}
+  .cs-foot{padding:20px}
+  .job-card{padding:22px 20px}
+  .about-card{padding:26px 22px}
+  /* the floating decorative pills crowd small screens */
+  .pill-dot{display:none}
+}
 
-      input[type=range]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 26px;
-        height: 26px;
-        margin-top: -11px;
-        border-radius: 50%;
-        background: var(--g-mint);
-        border: 4px solid var(--dark-3);
-        cursor: pointer
-      }
-
-      input[type=range]::-moz-range-thumb {
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        background: var(--g-mint);
-        border: 4px solid var(--dark-3);
-        cursor: pointer
-      }
-    }
-
-    @media(hover:none), (pointer:coarse), (max-width:1180px) {
-
-      /* mood tiles reach the 44px comfort target */
-      .tiles button {
-        padding: 13px 18px;
-        font-size: 13.5px
-      }
-
-      /* footer links get real tappable rows */
-      .fg a {
-        padding: 11px 0;
-        margin-bottom: 2px
-      }
-
-      .logo {
-        padding: 6px 0
-      }
-
-      nav.desk a {
-        padding: 11px 15px
-      }
-
-      .nav-cta {
-        padding: 12px 22px
-      }
-    }
-
-    @media(max-width:768px) {
-      .pad {
-        padding: 64px 0
-      }
-
-      .hero {
-        padding: 104px 0 60px
-      }
-
-      /* headline gets breathing room on narrow screens */
-      .hero h1 {
-        font-size: clamp(2.6rem, 12.5vw, 4rem);
-        line-height: .94
-      }
-
-      .h-sec {
-        font-size: clamp(1.85rem, 7.6vw, 2.6rem)
-      }
-
-      .lede {
-        font-size: 15px;
-        margin-top: 18px
-      }
-
-      .hero .thesis {
-        font-size: 1.22rem;
-        max-width: none
-      }
-
-      .hero p.intro {
-        font-size: 14px;
-        max-width: none
-      }
-
-      /* buttons go full width so they're easy to hit and read */
-      .acts,
-      .clist {
-        gap: 10px
-      }
-
-      .acts .btn,
-      .clist .btn {
-        flex: 1 1 100%;
-        justify-content: center;
-        padding: 15px 24px
-      }
-
-      .cs-foot .btn {
-        flex: 1 1 100%;
-        justify-content: center
-      }
-
-      .cs-foot {
-        gap: 14px
-      }
-
-      .cs-head,
-      .cs-demo {
-        padding: 24px 20px
-      }
-
-      .cs-foot {
-        padding: 20px
-      }
-
-      .job-card {
-        padding: 22px 20px
-      }
-
-      .about-card {
-        padding: 26px 22px
-      }
-
-      /* the floating decorative pills crowd small screens */
-      .pill-dot {
-        display: none
-      }
-    }
-
-    @media(max-width:480px) {
-      .shell {
-        padding: 0 18px
-      }
-
-      .hero-top {
-        gap: 8px
-      }
-
-      .hero-top .pill {
-        font-size: 11.5px;
-        padding: 8px 15px
-      }
-
-      .eyebrow {
-        font-size: 10.5px;
-        letter-spacing: .22em
-      }
-
-      .hero h1 {
-        font-size: clamp(2.3rem, 13vw, 3.2rem)
-      }
-
-      .h-sec {
-        font-size: clamp(1.7rem, 8.4vw, 2.2rem)
-      }
-
-      /* case-study fact rail stacks rather than squeezing side by side */
-      .cs-facts {
-        flex-direction: column;
-        gap: 16px
-      }
-
-      .verdict .vn {
-        font-size: 2.1rem
-      }
-
-      .res .r,
-      .res .rh {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px
-      }
-
-      .res .r em,
-      .res .rh em {
-        white-space: normal
-      }
-
-      .stats {
-        gap: 10px
-      }
-
-      .stat {
-        padding: 20px
-      }
-
-      .fg {
-        grid-template-columns: 1fr;
-        gap: 26px
-      }
-    }
-  </style>
+@media(max-width:480px){
+  .shell{padding:0 18px}
+  .hero-top{gap:8px}
+  .hero-top .pill{font-size:11.5px;padding:8px 15px}
+  .eyebrow{font-size:10.5px;letter-spacing:.22em}
+  .hero h1{font-size:clamp(2.3rem,13vw,3.2rem)}
+  .h-sec{font-size:clamp(1.7rem,8.4vw,2.2rem)}
+  /* case-study fact rail stacks rather than squeezing side by side */
+  .cs-facts{flex-direction:column;gap:16px}
+  .verdict .vn{font-size:2.1rem}
+  .res .r,.res .rh{flex-direction:column;align-items:flex-start;gap:4px}
+  .res .r em,.res .rh em{white-space:normal}
+  .stats{gap:10px}
+  .stat{padding:20px}
+  .fg{grid-template-columns:1fr;gap:26px}
+}
+</style>
 </head>
-
 <body>
 
-  <header id="hdr">
-    <div class="shell bar">
-      <a href="#top" class="logo">GK<i>.</i></a>
-      <nav class="desk">
-        <a href="#about">About</a>
-        <a href="#work">Case Studies</a>
-        <a href="#approach">Approach</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="resume.pdf" target="_blank" rel="noopener" class="pill nav-cta">Résumé</a>
-      <button id="burger" aria-label="Open menu" aria-expanded="false">
-        <svg width="17" height="13" viewBox="0 0 17 13" fill="none">
-          <path d="M1 1h15M1 6.5h15M1 12h15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <div id="drawer">
-    <a href="#about"><span>01</span>About</a>
-    <a href="#work"><span>02</span>Case Studies</a>
-    <a href="#approach"><span>03</span>Approach</a>
-    <a href="#experience"><span>04</span>Experience</a>
-    <a href="#skills"><span>05</span>Skills</a>
-    <a href="#education"><span>06</span>Education</a>
-    <a href="#contact"><span>07</span>Contact</a>
-    <a href="resume.pdf" target="_blank" rel="noopener" class="pill">Résumé</a>
+<header id="hdr">
+  <div class="shell bar">
+    <a href="#top" class="logo">GK</a>
+    <nav class="desk">
+      <a href="#about">About</a>
+      <a href="#work">Case Studies</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="resume.pdf" target="_blank" rel="noopener" class="pill nav-cta">Résumé</a>
+    <button id="burger" aria-label="Open menu" aria-expanded="false">
+      <svg width="17" height="13" viewBox="0 0 17 13" fill="none"><path d="M1 1h15M1 6.5h15M1 12h15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
   </div>
+</header>
 
-  <!-- ============ HERO ============ -->
-  <section class="dark hero" id="top">
-    <span class="pill-dot" style="right:4%;top:14%" aria-hidden></span>
-    <span class="pill-dot" style="right:7%;bottom:16%" aria-hidden></span>
-    <div class="shell">
-      <div class="hero-top rv">
-        <span class="pill">Gokul Krishnan N</span>
-        <span class="pill">Chennai, India</span>
-      </div>
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow rv">Product Analyst · APM · Business Analyst</p>
-          <h1 class="rv">Product<span class="g">Portfolio</span></h1>
-          <p class="role rv" id="role" aria-live="polite">Product Analyst</p>
-          <p class="thesis rv">I look for the moment a user <em>hesitates</em> — and redesign it.</p>
-          <p class="intro rv">Product-minded technologist with 2 years of experience across fintech and SaaS,
-            translating business requirements into user-centric software. Pursuing an MBA in AI for Business at BITS
-            Pilani (WILP) with a Product Management major.</p>
-          <div class="acts rv">
-            <a href="#work" class="btn btn-fill">See the case studies →</a>
-            <a href="#contact" class="btn btn-out">Get in touch</a>
-          </div>
+<div id="drawer">
+  <a href="#about"><span>01</span>About</a>
+  <a href="#work"><span>02</span>Case Studies</a>
+  <a href="#approach"><span>03</span>Approach</a>
+  <a href="#experience"><span>04</span>Experience</a>
+  <a href="#skills"><span>05</span>Skills</a>
+  <a href="#education"><span>06</span>Education</a>
+  <a href="#contact"><span>07</span>Contact</a>
+  <a href="resume.pdf" target="_blank" rel="noopener" class="pill">Résumé</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="dark hero" id="top">
+  <span class="pill-dot" style="right:4%;top:14%" aria-hidden></span>
+  <span class="pill-dot" style="right:7%;bottom:16%" aria-hidden></span>
+  <div class="shell">
+    <div class="hero-top rv">
+      <span class="pill">Gokul Krishnan N</span>
+      <span class="pill">Chennai, India</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow rv">Product Analyst · APM · Business Analyst</p>
+        <h1 class="rv">Product<span class="g">Portfolio</span></h1>
+        <p class="role rv" id="role" aria-live="polite">Product Analyst</p>
+        <p class="thesis rv">I look for the moment a user <em>hesitates</em> — and redesign it.</p>
+        <p class="intro rv">Product-minded technologist with 2 years of experience across fintech and SaaS, translating business requirements into user-centric software. Pursuing an MBA in AI for Business at BITS Pilani (WILP) with a Product Management major.</p>
+        <div class="acts rv">
+          <a href="#work" class="btn btn-fill">See the case studies →</a>
+          <a href="#contact" class="btn btn-out">Get in touch</a>
         </div>
+      </div>
 
-        <div class="shot rv">
-          <span class="gblock" aria-hidden></span>
-          <figure>
-            <!-- Add photo.jpg beside this file. If missing, the monogram shows. -->
-            <img src="photo.jpg" alt="Gokul Krishnan N"
-              onerror="this.remove();document.getElementById('ini').style.display='block'">
-            <span class="ini" id="ini" style="display:none">GK</span>
-          </figure>
-          <div class="tagcard">
-            <b>Software Engineer</b>
-            <span>Hexamap Solutions · Chennai</span>
-          </div>
+      <div class="shot rv">
+        <span class="gblock" aria-hidden></span>
+        <figure>
+          <!-- Add photo.jpg beside this file. If missing, the monogram shows. -->
+          <img src="photo.jpg" alt="Gokul Krishnan N"
+               onerror="this.remove();document.getElementById('ini').style.display='block'">
+          <span class="ini" id="ini" style="display:none">GK</span>
+        </figure>
+        <div class="tagcard">
+          <b>Software Engineer</b>
+          <span>Hexamap Solutions · Chennai</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="light pad" id="about">
-    <div class="shell">
-      <span class="pill-sm rv" style="margin-bottom:20px" aria-hidden></span>
-      <h2 class="h-sec rv"><span class="b">Personal</span><span class="g">Introduction</span></h2>
+<!-- ============ ABOUT ============ -->
+<section class="light pad" id="about">
+  <div class="shell">
+    <span class="pill-sm rv" style="margin-bottom:20px" aria-hidden></span>
+    <h2 class="h-sec rv"><span class="b">Personal</span><span class="g">Introduction</span></h2>
 
-      <div class="about-grid">
-        <div class="rv">
-          <div class="about-card">
-            <span class="pill-sm" aria-hidden></span>
-            <p>Most of my work has happened at the seam between stakeholders and engineering — sitting in the discovery
-              call, writing the user story, then building the thing and watching where it breaks. That loop is why I
-              care less about features than about the specific moment a person stalls.</p>
-          </div>
-          <div class="stats">
-            <div class="stat"><b>2</b><span>Years industry</span></div>
-            <div class="stat"><b>2</b><span>Case studies</span></div>
-            <div class="stat"><b>4</b><span>Languages</span></div>
-          </div>
+    <div class="about-grid">
+      <div class="rv">
+        <div class="about-card">
+          <span class="pill-sm" aria-hidden></span>
+          <p>Most of my work has happened at the seam between stakeholders and engineering — sitting in the discovery call, writing the user story, then building the thing and watching where it breaks. That loop is why I care less about features than about the specific moment a person stalls.</p>
         </div>
-
-        <div class="rv">
-          <p class="lede" style="margin-top:0">Product-minded technologist with 2 years of experience across fintech and
-            SaaS, translating business requirements into user-centric software. Experienced in stakeholder
-            collaboration, user story writing, and cross-functional product delivery. Pursuing an MBA in AI for Business
-            at BITS Pilani (WILP) with a Product Management major.</p>
-          <p class="lede">Both case studies below start from a moment of hesitation: someone scrolling a food app
-            without deciding, someone staring at a surge fee at checkout. Neither ends with a feature list. They end
-            with a metric, a set of trade-offs, and the condition under which the idea should be abandoned.</p>
-          <p class="lede"><b style="color:var(--txt-dark)">Currently</b> — Software Engineer at Hexamap Solutions,
-            Chennai.<br>
-            <b style="color:var(--txt-dark)">Studying</b> — MBA, AI for Business, BITS Pilani (WILP), Product Management
-            major.<br>
-            <b style="color:var(--txt-dark)">Languages</b> — Tamil, English, Telugu, Hindi.
-          </p>
+        <div class="stats">
+          <div class="stat"><b>2</b><span>Years industry</span></div>
+          <div class="stat"><b>2</b><span>Case studies</span></div>
+          <div class="stat"><b>4</b><span>Languages</span></div>
         </div>
       </div>
+
+      <div class="rv">
+        <p class="lede" style="margin-top:0">Product-minded technologist with 2 years of experience across fintech and SaaS, translating business requirements into user-centric software. Experienced in stakeholder collaboration, user story writing, and cross-functional product delivery. Pursuing an MBA in AI for Business at BITS Pilani (WILP) with a Product Management major.</p>
+        <p class="lede">Both case studies below start from a moment of hesitation: someone scrolling a food app without deciding, someone staring at a surge fee at checkout. Neither ends with a feature list. They end with a metric, a set of trade-offs, and the condition under which the idea should be abandoned.</p>
+        <p class="lede"><b style="color:var(--txt-dark)">Currently</b> — Software Engineer at Hexamap Solutions, Chennai.<br>
+        <b style="color:var(--txt-dark)">Studying</b> — MBA, AI for Business, BITS Pilani (WILP), Product Management major.<br>
+        <b style="color:var(--txt-dark)">Languages</b> — Tamil, English, Telugu, Hindi.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ CASE STUDIES ============ -->
-  <section class="dark pad" id="work">
-    <span class="pill-dot" style="right:5%;top:8%" aria-hidden></span>
-    <div class="shell">
-      <p class="eyebrow rv">Case Studies</p>
-      <h2 class="h-sec rv"><span class="b">Work You</span><span class="g">Can Operate</span></h2>
-      <p class="lede rv">Both take an Indian consumer product and a moment where users stall — an endless scroll, a
-        surge fee at checkout — and rebuild that moment around one metric. The demos below are the real mechanics from
-        each study, so you can test the thinking instead of taking my word for it.</p>
+<!-- ============ CASE STUDIES ============ -->
+<section class="dark pad" id="work">
+  <span class="pill-dot" style="right:5%;top:8%" aria-hidden></span>
+  <div class="shell">
+    <p class="eyebrow rv">Case Studies</p>
+    <h2 class="h-sec rv"><span class="b">Work You</span><span class="g">Can Operate</span></h2>
+    <p class="lede rv">Both take an Indian consumer product and a moment where users stall — an endless scroll, a surge fee at checkout — and rebuild that moment around one metric. The demos below are the real mechanics from each study, so you can test the thinking instead of taking my word for it.</p>
 
-      <div style="margin-top:48px">
-        <!-- ZOMATO -->
-        <article class="cs z rv" id="zomato">
-          <div class="cs-head">
+    <div style="margin-top:48px">
+      <!-- ZOMATO -->
+      <article class="cs z rv" id="zomato">
+        <div class="cs-head">
+          <div>
+            <span class="cs-badge"><i></i>Zomato · Discovery</span>
+            <h3>Personalised Food Recommendation</h3>
+            <p class="sum">An AI-driven recommendation concept to improve discovery, retention, and repeat orders. Undecided users abandon before they ever build a cart, so the concept adds an optional express lane — natural-language search, mood tiles, and a proactive reorder surface — without touching the browse feed that drives impulse buying.</p>
+            <div class="tags">
+              <span>Discovery</span><span>Personalisation</span><span>Hook Model</span><span>RICE</span><span>Wireframes</span>
+            </div>
+          </div>
+          <dl class="cs-facts">
+            <div class="hl"><dt>North star</dt><dd>Repeat order frequency</dd></div>
+            <div><dt>Three surfaces</dt><dd>Tell · Offer · Remember</dd></div>
+            <div><dt>Primary user</dt><dd>Returning, undecided</dd></div>
+          </dl>
+        </div>
+        <div class="cs-demo">
+          <span class="demo-cue">Try it — tap a question below</span>
+          <p class="demo-intro">Zomato's search matches <b>keywords</b>. Type "cold" and you get restaurants
+            with "Cool" in the name. This one reads <b>intent</b> — including what you <b>don't</b> want.</p>
+
+          <div class="sbar">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="7" cy="7" r="5.2" stroke="#fff" stroke-width="1.5" />
+              <path d="M11 11l3.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <span class="q" id="sq"></span><span class="cursor" aria-hidden></span>
+          </div>
+
+          <div class="qchips" id="qchips" role="group" aria-label="Example searches"></div>
+
+          <div class="parsed" id="parsed" aria-live="polite"></div>
+          <div class="res" id="searchOut"></div>
+
+          <div class="fallback">
+            <b>Can't put it into words?</b> The same engine offers moods instead — one tap, same short list.
+          </div>
+          <div class="tiles" id="tiles" role="group" aria-label="Mood options"></div>
+          <div class="res" id="moodOut" aria-live="polite"></div>
+
+          <p class="point"><b>The point:</b> one path for people who know what they want, one for people who
+            don't — both ending in a decidable list instead of four hundred restaurants. The full study covers
+            how results are ranked, and whether this actually lifts repeat orders.</p>
+        </div>
+        <div class="cs-foot">
+          <span class="scope">Problem framing · RICE prioritisation · wireframes · trade-offs</span>
+          <a href="zomato.pdf" target="_blank" rel="noopener" class="btn btn-fill">Read case study →</a>
+        </div>
+      </article>
+
+      <!-- BLINKIT -->
+      <article class="cs b rv" id="blinkit">
+        <div class="cs-head">
+          <div>
+            <span class="cs-badge"><i></i>Blinkit · Loyalty &amp; Pricing</span>
+            <h3>Surge Fee → Surge Coins</h3>
+            <p class="sum">A loyalty-loop model that reduces surge-pricing friction and improves GMV. The surge fee stays and the revenue stays — but 40% returns as time-bound coins, so the moment that today pushes a customer toward a competitor becomes the reason they come back. It only profits where those coins cause genuinely new orders, which is what the model tests.</p>
+            <div class="tags">
+              <span>Loyalty loop</span><span>Pricing</span><span>Loss aversion</span><span>Unit economics</span><span>Impact vs Effort</span>
+            </div>
+          </div>
+          <dl class="cs-facts">
+            <div class="hl"><dt>North star</dt><dd>Repeat purchase rate</dd></div>
+            <div><dt>Break-even</dt><dd>48% incrementality</dd></div>
+            <div><dt>Mechanic</dt><dd>40% back · 7-day validity</dd></div>
+          </dl>
+        </div>
+        <div class="cs-demo">
+          <span class="demo-cue">Try it — drag the first slider left</span>
+          <p class="demo-intro">Blinkit charges a surge fee when it's busy. My idea: <b>give 40% of it back as
+            coins</b>, so the fee feels less like a punishment and more like a reason to return. But giving money
+            away costs real money — <b>so does it actually pay off?</b> That's what these two sliders test.</p>
+
+          <div class="calc">
             <div>
-              <span class="cs-badge"><i></i>Zomato · Discovery</span>
-              <h3>Personalised Food Recommendation</h3>
-              <p class="sum">An AI-driven recommendation concept to improve discovery, retention, and repeat orders.
-                Undecided users abandon before they ever build a cart, so the concept adds an optional express lane —
-                natural-language search, mood tiles, and a proactive reorder surface — without touching the browse feed
-                that drives impulse buying.</p>
-              <div class="tags">
-                <span>Discovery</span><span>Personalisation</span><span>Hook
-                  Model</span><span>RICE</span><span>Wireframes</span>
+              <div class="ctrl">
+                <div class="cr">
+                  <label for="incr">
+                    <span class="plain">How many coin-users came back <em>because</em> of the coin?</span>
+                    <span class="term">Incrementality</span>
+                  </label>
+                  <span class="cv" id="incrV">55%</span>
+                </div>
+                <input type="range" id="incr" min="20" max="90" step="1" value="55">
+                <p class="cd">The rest would have ordered anyway — for them the coin was money Blinkit didn't need
+                  to spend. This is the lever the whole programme lives on.</p>
+              </div>
+              <div class="ctrl">
+                <div class="cr">
+                  <label for="coin">
+                    <span class="plain">How much of the fee comes back as coins?</span>
+                    <span class="term">Coin value</span>
+                  </label>
+                  <span class="cv" id="coinV">₹12</span>
+                </div>
+                <input type="range" id="coin" min="5" max="30" step="1" value="12">
+                <p class="cd">₹12 is 40% of a ₹30 surge fee. Give back more and the idea has to work harder to
+                  break even — which is exactly why the coin stays small.</p>
               </div>
             </div>
-            <dl class="cs-facts">
-              <div class="hl">
-                <dt>North star</dt>
-                <dd>Repeat order frequency</dd>
-              </div>
-              <div>
-                <dt>Three surfaces</dt>
-                <dd>Tell · Offer · Remember</dd>
-              </div>
-              <div>
-                <dt>Primary user</dt>
-                <dd>Returning, undecided</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="cs-demo">
-            <span class="demo-lab"><i></i>Try it — tap a mood</span>
-            <div class="tiles" id="tiles" role="group" aria-label="Mood options"></div>
-            <div class="res" id="moodOut" aria-live="polite"></div>
-            <p class="point"><b>The point:</b> one tap replaces four hundred restaurants with a short, decidable set.
-              Tiles re-rank by user and context — a summer afternoon leads with something chill, a rainy evening leads
-              with comfort food.</p>
-          </div>
-          <div class="cs-foot">
-            <span class="scope">Problem framing · RICE prioritisation · wireframes · trade-offs</span>
-            <a href="zomato.pdf" target="_blank" rel="noopener" class="btn btn-fill">Read case study →</a>
-          </div>
-        </article>
-
-        <!-- BLINKIT -->
-        <article class="cs b rv" id="blinkit">
-          <div class="cs-head">
             <div>
-              <span class="cs-badge"><i></i>Blinkit · Loyalty &amp; Pricing</span>
-              <h3>Surge Fee → Surge Coins</h3>
-              <p class="sum">A loyalty-loop model that reduces surge-pricing friction and improves GMV. The surge fee
-                stays and the revenue stays — but 40% returns as time-bound coins, so the moment that today pushes a
-                customer toward a competitor becomes the reason they come back. It only profits where those coins cause
-                genuinely new orders, which is what the model tests.</p>
-              <div class="tags">
-                <span>Loyalty loop</span><span>Pricing</span><span>Loss aversion</span><span>Unit
-                  economics</span><span>Impact vs Effort</span>
+              <div class="verdict up" id="verdict">
+                <p class="vk">Blinkit's profit per 100 surge orders</p>
+                <p class="vn" id="net">+₹114</p>
+                <p class="vs" id="vsub">Profitable at these assumptions.</p>
               </div>
-            </div>
-            <dl class="cs-facts">
-              <div class="hl">
-                <dt>North star</dt>
-                <dd>Repeat purchase rate</dd>
+              <div class="scale">
+                <b id="annual">≈ ₹20.8 Cr / year</b>
+                at 5 lakh surge orders a day
               </div>
-              <div>
-                <dt>Break-even</dt>
-                <dd>48% incrementality</dd>
-              </div>
-              <div>
-                <dt>Mechanic</dt>
-                <dd>40% back · 7-day validity</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="cs-demo">
-            <span class="demo-lab"><i></i>Try it — break the economics</span>
-            <div class="calc">
-              <div>
-                <div class="ctrl">
-                  <div class="cr"><label for="incr">Incrementality of redeemed coins</label><span class="cv"
-                      id="incrV">55%</span></div>
-                  <input type="range" id="incr" min="20" max="90" step="1" value="55">
-                  <p class="cd">Share of redemptions that are genuinely new orders — ones that would not have happened
-                    without the coin. The lever the whole programme lives on.</p>
-                </div>
-                <div class="ctrl">
-                  <div class="cr"><label for="coin">Coin returned per surge order</label><span class="cv"
-                      id="coinV">₹12</span></div>
-                  <input type="range" id="coin" min="5" max="30" step="1" value="12">
-                  <p class="cd">40% of a ₹30 surge fee. Returning more raises the break-even bar — which is exactly why
-                    the coin stays small.</p>
-                </div>
-              </div>
-              <div>
-                <div class="verdict up" id="verdict">
-                  <p class="vk">Net per 100 surge orders</p>
-                  <p class="vn" id="net">+₹114</p>
-                  <p class="vs" id="vsub">Profitable at these assumptions.</p>
-                </div>
-                <p class="be">Break-even: <b id="beV">48%</b> incrementality</p>
-                <div class="bebar"><span class="f" id="beF"></span><span class="m" id="beM"></span></div>
-              </div>
-            </div>
-            <p class="point"><b>The point:</b> the honest version of this idea admits when it loses money. Drag
-              incrementality below the break-even line and the panel turns red — that condition is the argument, not a
-              footnote to it.</p>
-          </div>
-          <div class="cs-foot">
-            <span class="scope">Opportunity framing · P&amp;L · sensitivity · anti-exploit design</span>
-            <a href="blinkit.pdf" target="_blank" rel="noopener" class="btn btn-fill">Read case study →</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ APPROACH ============ -->
-  <section class="light pad" id="approach">
-    <div class="shell">
-      <span class="pill-sm rv" style="margin-bottom:20px" aria-hidden></span>
-      <h2 class="h-sec rv"><span class="b">How I Think</span><span class="g">About Product</span></h2>
-      <p class="lede rv">Frameworks are only worth naming if they changed a decision. These are the ones that actually
-        shaped what got built — and what got deliberately parked.</p>
-
-      <div class="principles">
-        <div class="prin rv"><span class="n">01</span>
-          <h4>Pick one metric</h4>
-          <p>A case study optimising three things optimises nothing. One north star, everything else demoted to
-            supporting or guardrail.</p>
-        </div>
-        <div class="prin rv"><span class="n">02</span>
-          <h4>Name the failure condition</h4>
-          <p>Every model should say when it stops working. Break-even lines and kill-conditions are the argument, not a
-            disclaimer.</p>
-        </div>
-        <div class="prin rv"><span class="n">03</span>
-          <h4>Protect the existing business</h4>
-          <p>New features that quietly cannibalise revenue don't ship. Additive beats disruptive when the incumbent is
-            already working.</p>
-        </div>
-        <div class="prin rv"><span class="n">04</span>
-          <h4>Design for the whole market</h4>
-          <p>India is not one language or one income. Pan-India products need mechanics that degrade gracefully, not
-            assumptions that exclude.</p>
-        </div>
-      </div>
-
-      <div class="sk-h rv" style="margin-top:50px"><b>Frameworks applied</b><i></i></div>
-      <div class="fw-grid">
-        <div class="fw rv">
-          <div class="ft">
-            <h4>North Star + Guardrails</h4><span class="where">Both</span>
-          </div>
-          <p>One primary metric, supporting indicators beneath it, and guardrails that must not break while chasing it.
-            Naming what could go wrong before anyone asks.</p>
-        </div>
-        <div class="fw rv">
-          <div class="ft">
-            <h4>Hook Model</h4><span class="where">Both</span>
-          </div>
-          <p>Trigger → Action → Reward → Investment. Used to argue why each concept builds a habit rather than a one-off
-            conversion.</p>
-        </div>
-        <div class="fw rv">
-          <div class="ft">
-            <h4>RICE</h4><span class="where">Zomato</span>
-          </div>
-          <p>Six ideas scored on Reach × Impact × Confidence ÷ Effort. Three built, three deliberately parked — the
-            parked ones matter as much as the built ones.</p>
-        </div>
-        <div class="fw rv">
-          <div class="ft">
-            <h4>Loss Aversion</h4><span class="where">Blinkit</span>
-          </div>
-          <p>People dislike the feeling of losing money more than the amount. Reframing a fee as an exchange changes
-            behaviour without changing price.</p>
-        </div>
-        <div class="fw rv">
-          <div class="ft">
-            <h4>Unit Economics</h4><span class="where">Blinkit</span>
-          </div>
-          <p>Treating the concept as an investment with a break-even condition — and publishing the point at which it
-            stops being worth doing.</p>
-        </div>
-        <div class="fw rv">
-          <div class="ft">
-            <h4>Impact vs Effort</h4><span class="where">Blinkit</span>
-          </div>
-          <p>Every v1 rule scored against its alternatives, including the two rules deliberately rejected.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="dark alt pad" id="experience">
-    <span class="pill-dot" style="right:5%;top:12%" aria-hidden></span>
-    <div class="shell">
-      <p class="eyebrow rv">Experience</p>
-      <h2 class="h-sec rv"><span class="b">Career</span><span class="g">Background</span></h2>
-      <p class="lede rv">Most of my product work so far has happened at the seam between stakeholders and engineering —
-        running discovery calls, writing the user stories, then building the thing.</p>
-
-      <div class="tl">
-        <div class="job now rv">
-          <div class="job-card">
-            <div class="jt">
-              <h4>Software Engineer</h4><span class="when">Jul 2025 — Present</span>
-            </div>
-            <p class="org">Hexamap Solutions · Chennai, India</p>
-            <ul>
-              <li>Led client discovery calls, translating business requirements into user stories and technical
-                specifications; improved sprint planning and release processes for more predictable deliveries.</li>
-              <li>Owned end-to-end delivery of the TUFIDCO project management dashboard, collaborating with stakeholders
-                to define workflows, validate UX, and incorporate feedback; consolidated four content pages into a
-                single view, improving usability and page performance.</li>
-              <li>Implemented session-based caching to reduce API calls and improve responsiveness; collaborated with
-                designers to deliver production-ready UI/UX improvements and React interfaces for IUCN/FARA project
-                modules.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="job rv">
-          <div class="job-card">
-            <div class="jt">
-              <h4>Backend Developer Intern</h4><span class="when">Feb 2025 — May 2025</span>
-            </div>
-            <p class="org">ParkQwik · Chennai, India</p>
-            <ul>
-              <li>Designed and implemented modular slot allocation logic for a smart parking platform, addressing a core
-                product problem: peak-hour double-booking — estimated ~40% reduction in incidents post-deployment.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="job rv">
-          <div class="job-card">
-            <div class="jt">
-              <h4>Application Support</h4><span class="when">2022 — 2023</span>
-            </div>
-            <p class="org">FIS Payment Solutions and Services · Chennai, India</p>
-            <ul>
-              <li>Served as the bridge between business stakeholders (bank managers) and the technical team during UAT
-                cycles — facilitated scheduled calls to gather client feedback, documented issues, and ensured fixes
-                were validated before release.</li>
-              <li>Diagnosed a critical page rendering issue causing 6–8 second delays affecting ~15–20 bank manager
-                users; implemented lazy loading to reduce load time to under 1.5 seconds — a 75%+ improvement in
-                perceived performance.</li>
-              <li>Managed end-to-end ticket lifecycle: first-level troubleshooting, root cause identification, routing,
-                and closure within defined SLA windows.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SKILLS ============ -->
-  <section class="light pad" id="skills">
-    <div class="shell">
-      <span class="pill-sm rv" style="margin-bottom:20px" aria-hidden></span>
-      <h2 class="h-sec rv"><span class="b">Success</span><span class="g">Highlights</span></h2>
-      <p class="lede rv">Product thinking backed by the ability to build it — which means specs engineering can actually
-        ship.</p>
-
-      <div style="margin-top:44px">
-        <div class="sk-group rv">
-          <div class="sk-h"><b>Product</b><i></i><em>11</em></div>
-          <div class="sk-grid">
-            <span class="sk core">Requirements Gathering<em>core</em></span>
-            <span class="sk core">User Story Writing<em>core</em></span>
-            <span class="sk core">Feature Prioritization<em>core</em></span>
-            <span class="sk core">Stakeholder Management<em>core</em></span>
-            <span class="sk">Sprint Planning</span>
-            <span class="sk">UX Reviews</span>
-            <span class="sk">Product Thinking</span>
-            <span class="sk">API Trade-off Analysis</span>
-            <span class="sk">Business Impact Analysis</span>
-            <span class="sk">Cross-functional Collaboration</span>
-            <span class="sk">Agile</span>
-          </div>
-        </div>
-        <div class="sk-group rv">
-          <div class="sk-h"><b>Technical</b><i></i><em>7</em></div>
-          <div class="sk-grid">
-            <span class="sk">JavaScript</span><span class="sk">React.js</span><span class="sk">Node.js</span>
-            <span class="sk">REST APIs</span><span class="sk">PostgreSQL</span><span class="sk">MongoDB</span><span
-              class="sk">SQL</span>
-          </div>
-        </div>
-        <div class="sk-group rv">
-          <div class="sk-h"><b>Tools</b><i></i><em>6</em></div>
-          <div class="sk-grid">
-            <span class="sk">Jira</span><span class="sk">Figma</span><span class="sk">Notion</span>
-            <span class="sk">Git / GitHub</span><span class="sk">Postman</span><span class="sk">Excel</span>
-          </div>
-        </div>
-        <div class="sk-group rv">
-          <div class="sk-h"><b>Collaboration</b><i></i><em>4</em></div>
-          <div class="sk-grid">
-            <span class="sk">Client Facilitation</span><span class="sk">Problem Framing</span>
-            <span class="sk">Structured Communication</span><span class="sk">Cross-functional Collaboration</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EDUCATION ============ -->
-  <section class="dark pad" id="education">
-    <span class="pill-dot" style="left:4%;bottom:12%" aria-hidden></span>
-    <div class="shell">
-      <p class="eyebrow rv">Background</p>
-      <h2 class="h-sec rv"><span class="b">Education</span><span class="g">&amp; Builds</span></h2>
-      <p class="lede rv">An engineering base, a product-focused MBA in progress, and a habit of shipping side projects
-        end to end.</p>
-
-      <div class="edu-grid">
-        <div class="rv">
-          <div class="sk-h" style="margin-bottom:14px"><b style="color:var(--txt-light-dim)">Education</b><i
-              style="background:var(--line-dark)"></i></div>
-          <div class="erow">
-            <div><b>MBA — Artificial Intelligence for Business</b><span>BITS Pilani (WILP) · Major: Product
-                Management</span></div><span class="yr">2025 — Present</span>
-          </div>
-          <div class="erow">
-            <div><b>B.Tech — Electrical &amp; Electronics Engineering</b><span>SASTRA University</span></div><span
-              class="yr">2020</span>
-          </div>
-          <div class="erow">
-            <div><b>Sound Engineering &amp; Music Production</b><span>BLU Academy</span></div><span class="yr">2021 —
-              2022</span>
-          </div>
-
-          <div class="sk-h" style="margin:34px 0 14px"><b style="color:var(--txt-light-dim)">Certification</b><i
-              style="background:var(--line-dark)"></i></div>
-          <div class="cert">
-            <span class="tick" aria-hidden>✓</span>
-            <div><b style="display:block;font-size:15px;color:#fff">Full Stack Web Developer Programme</b>
-              <span style="font-size:13px;color:var(--txt-light-dim);display:block;margin-top:4px">GUVI Geek Networks /
-                Zen Class</span>
+              <p class="be">Break-even: <b id="beV">48%</b> — below this, the coins cost more than they earn</p>
+              <div class="bebar"><span class="f" id="beF"></span><span class="m" id="beM"></span></div>
             </div>
           </div>
-        </div>
 
-        <div class="rv">
-          <div class="sk-h" style="margin-bottom:14px"><b style="color:var(--txt-light-dim)">Projects</b><i
-              style="background:var(--line-dark)"></i></div>
-          <div class="proj">
-            <b>Social Media Application</b>
-            <p>Real-time full-stack social platform with authentication and user interactions.</p>
-            <p class="stack">React · Node.js · MongoDB · Firebase</p>
-          </div>
-          <div class="proj">
-            <b>E-commerce Website</b>
-            <p>Product catalog, shopping cart, and payment gateway integration.</p>
-            <p class="stack">Full Stack</p>
-          </div>
-          <div class="proj">
-            <b>Weather API Dashboard</b>
-            <p>Real-time weather dashboard using public APIs.</p>
-            <p class="stack">JavaScript · REST API</p>
-          </div>
+          <p class="point"><b>The point:</b> most pitches only show the version where the idea works. Drag
+            incrementality below 48% and this one turns red — that failure condition is the argument, not a
+            footnote. The full study covers where the numbers come from and how the coins are protected from abuse.</p>
+        </div>
+        <div class="cs-foot">
+          <span class="scope">Opportunity framing · P&amp;L · sensitivity · anti-exploit design</span>
+          <a href="blinkit.pdf" target="_blank" rel="noopener" class="btn btn-fill">Read case study →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section class="light pad" id="approach">
+  <div class="shell">
+    <span class="pill-sm rv" style="margin-bottom:20px" aria-hidden></span>
+    <h2 class="h-sec rv"><span class="b">How I Think</span><span class="g">About Product</span></h2>
+    <p class="lede rv">Frameworks are only worth naming if they changed a decision. These are the ones that actually shaped what got built — and what got deliberately parked.</p>
+
+    <div class="principles">
+      <div class="prin rv"><span class="n">01</span><h4>Pick one metric</h4><p>A case study optimising three things optimises nothing. One north star, everything else demoted to supporting or guardrail.</p></div>
+      <div class="prin rv"><span class="n">02</span><h4>Name the failure condition</h4><p>Every model should say when it stops working. Break-even lines and kill-conditions are the argument, not a disclaimer.</p></div>
+      <div class="prin rv"><span class="n">03</span><h4>Protect the existing business</h4><p>New features that quietly cannibalise revenue don't ship. Additive beats disruptive when the incumbent is already working.</p></div>
+      <div class="prin rv"><span class="n">04</span><h4>Design for the whole market</h4><p>India is not one language or one income. Pan-India products need mechanics that degrade gracefully, not assumptions that exclude.</p></div>
+    </div>
+
+    <div class="sk-h rv" style="margin-top:50px"><b>Frameworks applied</b><i></i></div>
+    <div class="fw-grid">
+      <div class="fw rv"><div class="ft"><h4>North Star + Guardrails</h4><span class="where">Both</span></div><p>One primary metric, supporting indicators beneath it, and guardrails that must not break while chasing it. Naming what could go wrong before anyone asks.</p></div>
+      <div class="fw rv"><div class="ft"><h4>Hook Model</h4><span class="where">Both</span></div><p>Trigger → Action → Reward → Investment. Used to argue why each concept builds a habit rather than a one-off conversion.</p></div>
+      <div class="fw rv"><div class="ft"><h4>RICE</h4><span class="where">Zomato</span></div><p>Six ideas scored on Reach × Impact × Confidence ÷ Effort. Three built, three deliberately parked — the parked ones matter as much as the built ones.</p></div>
+      <div class="fw rv"><div class="ft"><h4>Loss Aversion</h4><span class="where">Blinkit</span></div><p>People dislike the feeling of losing money more than the amount. Reframing a fee as an exchange changes behaviour without changing price.</p></div>
+      <div class="fw rv"><div class="ft"><h4>Unit Economics</h4><span class="where">Blinkit</span></div><p>Treating the concept as an investment with a break-even condition — and publishing the point at which it stops being worth doing.</p></div>
+      <div class="fw rv"><div class="ft"><h4>Impact vs Effort</h4><span class="where">Blinkit</span></div><p>Every v1 rule scored against its alternatives, including the two rules deliberately rejected.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="dark alt pad" id="experience">
+  <span class="pill-dot" style="right:5%;top:12%" aria-hidden></span>
+  <div class="shell">
+    <p class="eyebrow rv">Experience</p>
+    <h2 class="h-sec rv"><span class="b">Career</span><span class="g">Background</span></h2>
+    <p class="lede rv">Most of my product work so far has happened at the seam between stakeholders and engineering — running discovery calls, writing the user stories, then building the thing.</p>
+
+    <div class="tl">
+      <div class="job now rv">
+        <div class="job-card">
+          <div class="jt"><h4>Software Engineer</h4><span class="when">Jul 2025 — Present</span></div>
+          <p class="org">Hexamap Solutions · Chennai, India</p>
+          <ul>
+            <li>Led client discovery calls, translating business requirements into user stories and technical specifications; improved sprint planning and release processes for more predictable deliveries.</li>
+            <li>Owned end-to-end delivery of the TUFIDCO project management dashboard, collaborating with stakeholders to define workflows, validate UX, and incorporate feedback; consolidated four content pages into a single view, improving usability and page performance.</li>
+            <li>Implemented session-based caching to reduce API calls and improve responsiveness; collaborated with designers to deliver production-ready UI/UX improvements and React interfaces for IUCN/FARA project modules.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job rv">
+        <div class="job-card">
+          <div class="jt"><h4>Backend Developer Intern</h4><span class="when">Feb 2025 — May 2025</span></div>
+          <p class="org">ParkQwik · Chennai, India</p>
+          <ul>
+            <li>Designed and implemented modular slot allocation logic for a smart parking platform, addressing a core product problem: peak-hour double-booking — estimated ~40% reduction in incidents post-deployment.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job rv">
+        <div class="job-card">
+          <div class="jt"><h4>Application Support</h4><span class="when">2022 — 2023</span></div>
+          <p class="org">FIS Payment Solutions and Services · Chennai, India</p>
+          <ul>
+            <li>Served as the bridge between business stakeholders (bank managers) and the technical team during UAT cycles — facilitated scheduled calls to gather client feedback, documented issues, and ensured fixes were validated before release.</li>
+            <li>Diagnosed a critical page rendering issue causing 6–8 second delays affecting ~15–20 bank manager users; implemented lazy loading to reduce load time to under 1.5 seconds — a 75%+ improvement in perceived performance.</li>
+            <li>Managed end-to-end ticket lifecycle: first-level troubleshooting, root cause identification, routing, and closure within defined SLA windows.</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="dark alt pad contact" id="contact">
-    <span class="pill-dot" style="left:6%;top:22%" aria-hidden></span>
-    <span class="pill-dot" style="right:6%;bottom:22%" aria-hidden></span>
-    <div class="shell">
-      <p class="eyebrow rv">Contact</p>
-      <h2 class="h-sec rv" style="max-width:16ch"><span class="b">Let's</span><span class="g">Connect</span></h2>
-      <p class="lede rv">I'm looking for product analyst and APM roles where I can keep doing what the case studies show
-        — finding the moment users stall, and arguing the fix with numbers.</p>
-      <div class="clist rv">
-        <a href="mailto:gk1481998@gmail.com" class="btn btn-fill">gk1481998@gmail.com</a>
-        <!-- <button type="button" class="btn btn-out"
-          onclick="navigator.clipboard.writeText('gk1481998@gmail.com');this.textContent='Copied ✓'">Copy email</button> -->
-        <a href="tel:+919445933216" class="btn btn-out">+91 94459 33216</a>
-        <a href="https://www.linkedin.com/in/gokul-krishnan-929142141" target="_blank" rel="noopener"
-          class="btn btn-out">LinkedIn</a>
-        <a href="https://github.com/krish19098" target="_blank" rel="noopener" class="btn btn-out">GitHub</a>
-        <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-out">Résumé (PDF)</a>
+<!-- ============ SKILLS ============ -->
+<section class="light pad" id="skills">
+  <div class="shell">
+    <span class="pill-sm rv" style="margin-bottom:20px" aria-hidden></span>
+    <h2 class="h-sec rv"><span class="b">Success</span><span class="g">Highlights</span></h2>
+    <p class="lede rv">Product thinking backed by the ability to build it — which means specs engineering can actually ship.</p>
+
+    <div style="margin-top:44px">
+      <div class="sk-group rv">
+        <div class="sk-h"><b>Product</b><i></i><em>11</em></div>
+        <div class="sk-grid">
+          <span class="sk core">Requirements Gathering<em>core</em></span>
+          <span class="sk core">User Story Writing<em>core</em></span>
+          <span class="sk core">Feature Prioritization<em>core</em></span>
+          <span class="sk core">Stakeholder Management<em>core</em></span>
+          <span class="sk">Sprint Planning</span>
+          <span class="sk">UX Reviews</span>
+          <span class="sk">Product Thinking</span>
+          <span class="sk">API Trade-off Analysis</span>
+          <span class="sk">Business Impact Analysis</span>
+          <span class="sk">Cross-functional Collaboration</span>
+          <span class="sk">Agile</span>
+        </div>
+      </div>
+      <div class="sk-group rv">
+        <div class="sk-h"><b>Technical</b><i></i><em>7</em></div>
+        <div class="sk-grid">
+          <span class="sk">JavaScript</span><span class="sk">React.js</span><span class="sk">Node.js</span>
+          <span class="sk">REST APIs</span><span class="sk">PostgreSQL</span><span class="sk">MongoDB</span><span class="sk">SQL</span>
+        </div>
+      </div>
+      <div class="sk-group rv">
+        <div class="sk-h"><b>Tools</b><i></i><em>6</em></div>
+        <div class="sk-grid">
+          <span class="sk">Jira</span><span class="sk">Figma</span><span class="sk">Notion</span>
+          <span class="sk">Git / GitHub</span><span class="sk">Postman</span><span class="sk">Excel</span>
+        </div>
+      </div>
+      <div class="sk-group rv">
+        <div class="sk-h"><b>Collaboration</b><i></i><em>4</em></div>
+        <div class="sk-grid">
+          <span class="sk">Client Facilitation</span><span class="sk">Problem Framing</span>
+          <span class="sk">Structured Communication</span><span class="sk">Cross-functional Collaboration</span>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="shell">
-      <div class="fg">
-        <div>
-          <p class="fn">GOKUL KRISHNAN N </p>
-          <p>Product Analyst · Associate Product Manager · Business Analyst. Based in Chennai, India.</p>
-        </div>
-        <div>
-          <h5>Case Studies</h5>
-          <a href="zomato.pdf" target="_blank" rel="noopener">Zomato — Discovery</a>
-          <a href="blinkit.pdf" target="_blank" rel="noopener">Blinkit — Surge Coins</a>
-        </div>
-        <div>
-          <h5>Elsewhere</h5>
-          <a href="https://www.linkedin.com/in/gokul-krishnan-929142141" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/krish19098" target="_blank" rel="noopener">GitHub</a>
-          <a href="mailto:gk1481998@gmail.com">Email</a>
-          <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+<!-- ============ EDUCATION ============ -->
+<section class="dark pad" id="education">
+  <span class="pill-dot" style="left:4%;bottom:12%" aria-hidden></span>
+  <div class="shell">
+    <p class="eyebrow rv">Background</p>
+    <h2 class="h-sec rv"><span class="b">Education</span><span class="g">&amp; Builds</span></h2>
+    <p class="lede rv">An engineering base, a product-focused MBA in progress, and a habit of shipping side projects end to end.</p>
+
+    <div class="edu-grid">
+      <div class="rv">
+        <div class="sk-h" style="margin-bottom:14px"><b style="color:var(--txt-light-dim)">Education</b><i style="background:var(--line-dark)"></i></div>
+        <div class="erow"><div><b>MBA — Artificial Intelligence for Business</b><span>BITS Pilani (WILP) · Major: Product Management</span></div><span class="yr">2025 — Present</span></div>
+        <div class="erow"><div><b>B.Tech — Electrical &amp; Electronics Engineering</b><span>SASTRA University</span></div><span class="yr">2020</span></div>
+        <div class="erow"><div><b>Sound Engineering &amp; Music Production</b><span>BLU Academy</span></div><span class="yr">2021 — 2022</span></div>
+
+        <div class="sk-h" style="margin:34px 0 14px"><b style="color:var(--txt-light-dim)">Certification</b><i style="background:var(--line-dark)"></i></div>
+        <div class="cert">
+          <span class="tick" aria-hidden>✓</span>
+          <div><b style="display:block;font-size:15px;color:#fff">Full Stack Web Developer Programme</b>
+          <span style="font-size:13px;color:var(--txt-light-dim);display:block;margin-top:4px">GUVI Geek Networks / Zen Class</span></div>
         </div>
       </div>
-      <div class="fbase">
-        <p>© <span id="yr">2026</span> Gokul Krishnan N · Independent conceptual work</p>
+
+      <div class="rv">
+        <div class="sk-h" style="margin-bottom:14px"><b style="color:var(--txt-light-dim)">Projects</b><i style="background:var(--line-dark)"></i></div>
+        <div class="proj">
+          <b>Social Media Application</b>
+          <p>Real-time full-stack social platform with authentication and user interactions.</p>
+          <p class="stack">React · Node.js · MongoDB · Firebase</p>
+        </div>
+        <div class="proj">
+          <b>E-commerce Website</b>
+          <p>Product catalog, shopping cart, and payment gateway integration.</p>
+          <p class="stack">Full Stack</p>
+        </div>
+        <div class="proj">
+          <b>Weather API Dashboard</b>
+          <p>Real-time weather dashboard using public APIs.</p>
+          <p class="stack">JavaScript · REST API</p>
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    (function () {
-      "use strict";
-      var $ = function (s) { return document.querySelector(s) };
-      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      $("#yr").textContent = new Date().getFullYear();
+<!-- ============ CONTACT ============ -->
+<section class="dark alt pad contact" id="contact">
+  <span class="pill-dot" style="left:6%;top:22%" aria-hidden></span>
+  <span class="pill-dot" style="right:6%;bottom:22%" aria-hidden></span>
+  <div class="shell">
+    <p class="eyebrow rv">Contact</p>
+    <h2 class="h-sec rv" style="max-width:16ch"><span class="b">Let's</span><span class="g">Connect</span></h2>
+    <p class="lede rv">I'm looking for product analyst and APM roles where I can keep doing what the case studies show — finding the moment users stall, and arguing the fix with numbers.</p>
+    <div class="clist rv">
+      <a href="mailto:gk1481998@gmail.com" class="btn btn-fill">gk1481998@gmail.com</a>
+      <a href="tel:+919445933216" class="btn btn-out">+91 94459 33216</a>
+      <a href="https://www.linkedin.com/in/gokul-krishnan-929142141" target="_blank" rel="noopener" class="btn btn-out">LinkedIn</a>
+      <a href="https://github.com/krish19098" target="_blank" rel="noopener" class="btn btn-out">GitHub</a>
+      <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-out">Résumé (PDF)</a>
+    </div>
+  </div>
+</section>
 
-      /* header + scroll-spy */
-      var hdr = $("#hdr"), links = [].slice.call(document.querySelectorAll("nav.desk a"));
-      var secs = links.map(function (a) { return document.querySelector(a.getAttribute("href")) });
-      window.addEventListener("scroll", function () {
-        hdr.classList.toggle("stuck", window.scrollY > 30);
-        var y = window.scrollY + 170, idx = -1;
-        secs.forEach(function (s, i) { if (s && s.offsetTop <= y) idx = i; });
-        links.forEach(function (a, i) { a.classList.toggle("on", i === idx); });
-      }, { passive: true });
+<footer>
+  <div class="shell">
+    <div class="fg">
+      <div>
+        <p class="fn">GOKUL KRISHNAN N</p>
+        <p>Product Analyst · Associate Product Manager · Business Analyst. Based in Chennai, India.</p>
+      </div>
+      <div>
+        <h5>Case Studies</h5>
+        <a href="zomato.pdf" target="_blank" rel="noopener">Zomato — Discovery</a>
+        <a href="blinkit.pdf" target="_blank" rel="noopener">Blinkit — Surge Coins</a>
+      </div>
+      <div>
+        <h5>Elsewhere</h5>
+        <a href="https://www.linkedin.com/in/gokul-krishnan-929142141" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/krish19098" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:gk1481998@gmail.com">Email</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      </div>
+    </div>
+    <div class="fbase">
+      <p>© <span id="yr">2026</span> Gokul Krishnan N. Case studies are independent concepts, not affiliated with or endorsed by Zomato / Blinkit / Eternal Limited. Figures within them are illustrative and assumption-driven.</p>
+    </div>
+  </div>
+</footer>
 
-      /* drawer */
-      var burger = $("#burger"), drawer = $("#drawer");
-      burger.addEventListener("click", function () {
-        var open = drawer.classList.toggle("open");
-        burger.setAttribute("aria-expanded", open ? "true" : "false");
-        burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-        document.body.style.overflow = open ? "hidden" : "";
-      });
-      drawer.addEventListener("click", function (e) {
-        if (e.target.tagName === "A") {
-          drawer.classList.remove("open");
-          burger.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-      });
+<script>
+(function(){
+  "use strict";
+  var $=function(s){return document.querySelector(s)};
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  $("#yr").textContent=new Date().getFullYear();
 
-      /* rotating role */
-      var ROLES = ["Product Analyst", "Associate Product Manager", "Business Analyst"], r = $("#role"), ri = 0;
-      if (!reduce) { setInterval(function () { ri = (ri + 1) % ROLES.length; r.textContent = ROLES[ri]; }, 2600); }
-      else { r.textContent = ROLES.join(" · "); }
+  /* header + scroll-spy */
+  var hdr=$("#hdr"), links=[].slice.call(document.querySelectorAll("nav.desk a"));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute("href"))});
+  window.addEventListener("scroll",function(){
+    hdr.classList.toggle("stuck", window.scrollY>30);
+    var y=window.scrollY+170, idx=-1;
+    secs.forEach(function(s,i){ if(s && s.offsetTop<=y) idx=i; });
+    links.forEach(function(a,i){ a.classList.toggle("on", i===idx); });
+  },{passive:true});
 
-      /* reveal on scroll */
-      var rv = [].slice.call(document.querySelectorAll(".rv"));
-      if (reduce || !("IntersectionObserver" in window)) { rv.forEach(function (e) { e.classList.add("in") }); }
-      else {
-        var io = new IntersectionObserver(function (es) {
-          es.forEach(function (e, i) { if (e.isIntersecting) { e.target.style.transitionDelay = (i * 40) + "ms"; e.target.classList.add("in"); io.unobserve(e.target); } });
-        }, { threshold: .08, rootMargin: "-40px" });
-        rv.forEach(function (e) { io.observe(e) });
-      }
+  /* drawer */
+  var burger=$("#burger"), drawer=$("#drawer");
+  burger.addEventListener("click",function(){
+    var open=drawer.classList.toggle("open");
+    burger.setAttribute("aria-expanded",open?"true":"false");
+    burger.setAttribute("aria-label",open?"Close menu":"Open menu");
+    document.body.style.overflow=open?"hidden":"";
+  });
+  drawer.addEventListener("click",function(e){
+    if(e.target.tagName==="A"){
+      drawer.classList.remove("open");
+      burger.setAttribute("aria-expanded","false");
+      document.body.style.overflow="";
+    }
+  });
 
-      /* ---- Zomato mood tiles ---- */
-      var MOODS = [
-        { n: "Full-on hungry", h: "Big, filling plates", items: [["Hyderabadi Dum Biryani", "Paradise Kitchen \u00b7 \u20B9280 \u00b7 24 min"], ["Butter Chicken Thali", "Punjabi Zaika \u00b7 \u20B9310 \u00b7 26 min"], ["Paneer Combo Meal", "Sharma Ji \u00b7 \u20B9240 \u00b7 22 min"]] },
-        { n: "Light bite", h: "Small and easy", items: [["Cucumber Raita Meal", "Sharma Ji \u00b7 \u20B9150 \u00b7 22 min"], ["Cold Soba Salad", "Wok Box \u00b7 \u20B9230 \u00b7 26 min"], ["Fresh Fruit Bowl", "Fresh Bowl \u00b7 \u20B9120 \u00b7 15 min"]] },
-        { n: "Something spicy", h: "Turn the heat up", items: [["Chettinad Chicken", "Madras Mess \u00b7 \u20B9260 \u00b7 25 min"], ["Andhra Chilli Paneer", "Gujju Kitchen \u00b7 \u20B9220 \u00b7 21 min"], ["Schezwan Noodles", "Wok Box \u00b7 \u20B9190 \u00b7 19 min"]] },
-        { n: "Something chill", h: "Cooling, for a hot day", items: [["Curd Rice Bowl", "Madras Mess \u00b7 \u20B9120 \u00b7 20 min"], ["Watermelon Cooler", "Fresh Bowl \u00b7 \u20B990 \u00b7 15 min"], ["Chilled Kheer Cup", "Mithai House \u00b7 \u20B980 \u00b7 28 min"]] },
-        { n: "Ghar ka khana", h: "Tastes like home", items: [["Dal \u00b7 2 Roti \u00b7 Jeera Rice", "Sharma Ji Tiffins \u00b7 \u20B9160 \u00b7 18 min"], ["Rajma Chawal", "Sharma Ji Tiffins \u00b7 \u20B9140 \u00b7 18 min"], ["Moong Dal Khichdi", "Gujju Kitchen \u00b7 \u20B9130 \u00b7 20 min"]] },
-        { n: "Guilt-free", h: "High protein, lighter", items: [["Grilled Chicken Bowl", "Fresh Bowl \u00b7 \u20B9250 \u00b7 22 min"], ["Quinoa & Rajma Salad", "Wok Box \u00b7 \u20B9210 \u00b7 24 min"], ["Protein Thali", "Punjabi Zaika \u00b7 \u20B9270 \u00b7 25 min"]] }
-      ];
-      var tiles = $("#tiles"), out = $("#moodOut"), act = 4;
-      function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;") }
-      function paint() {
-        var m = MOODS[act];
-        out.innerHTML = '<div class="rh"><span>' + esc(m.h) + '</span><em>' + m.items.length + ' picks \u00b7 by relevance</em></div>' +
-          m.items.map(function (i) { return '<div class="r"><span>' + esc(i[0]) + '</span><em>' + esc(i[1]) + '</em></div>' }).join("");
-        Array.prototype.forEach.call(tiles.children, function (b, i) { b.setAttribute("aria-pressed", i === act ? "true" : "false") });
-      }
-      MOODS.forEach(function (m, i) {
-        var b = document.createElement("button");
-        b.type = "button"; b.textContent = m.n; b.setAttribute("aria-pressed", "false");
-        b.addEventListener("click", function () { act = i; paint() });
-        tiles.appendChild(b);
-      });
-      paint();
+  /* rotating role */
+  var ROLES=["Product Analyst","Associate Product Manager","Business Analyst"], r=$("#role"), ri=0;
+  if(!reduce){ setInterval(function(){ ri=(ri+1)%ROLES.length; r.textContent=ROLES[ri]; },2600); }
+  else { r.textContent=ROLES.join(" · "); }
 
-      /* ---- Blinkit break-even ---- */
-      var incr = $("#incr"), coin = $("#coin"), MARGIN = 25, BREAKAGE = .35;
-      function model() {
-        var ic = +incr.value / 100, cv = +coin.value, red = 100 * (1 - BREAKAGE);
-        var net = (red * ic) * MARGIN - red * cv, be = cv / MARGIN;
-        $("#incrV").textContent = incr.value + "%";
-        $("#coinV").textContent = "\u20B9" + cv;
-        var n = Math.round(net);
-        $("#net").textContent = (n >= 0 ? "+\u20B9" : "\u2212\u20B9") + Math.abs(n).toLocaleString("en-IN");
-        $("#verdict").className = "verdict " + (n >= 0 ? "up" : "down");
-        $("#vsub").textContent = n >= 0 ? "Profitable at these assumptions." : "Loses money \u2014 coins cost more than the margin they buy.";
-        var bp = Math.round(be * 100), now = +incr.value;
-        $("#beV").textContent = (be > 1 ? ">100" : bp) + "%";
-        var f = $("#beF"), mk = $("#beM");
-        f.style.width = Math.min(100, now) + "%";
-        f.style.background = (now >= bp && be <= 1) ? "var(--g-mint)" : "var(--loss)";
-        mk.style.left = Math.min(100, bp) + "%";
-        mk.style.display = be > 1 ? "none" : "block";
-      }
-      incr.addEventListener("input", model); coin.addEventListener("input", model); model();
-    })();
-  </script>
+  /* reveal on scroll */
+  var rv=[].slice.call(document.querySelectorAll(".rv"));
+  if(reduce || !("IntersectionObserver" in window)){ rv.forEach(function(e){e.classList.add("in")}); }
+  else {
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e,i){ if(e.isIntersecting){ e.target.style.transitionDelay=(i*40)+"ms"; e.target.classList.add("in"); io.unobserve(e.target);} });
+    },{threshold:.08,rootMargin:"-40px"});
+    rv.forEach(function(e){io.observe(e)});
+  }
+
+  /* ---- Zomato: intent search ---- */
+  var QUERIES = [
+    {
+      q: "something cold and sweet but not ice cream",
+      tags: [["cold", 0], ["sweet", 0], ["ice cream", 1]],
+      h: "Cold & sweet picks", n: "8 matches nearby",
+      items: [
+        ["Mango Kulfi Falooda", "Sweet Tooth Co. \u00b7 \u20B9129 \u00b7 25 min"],
+        ["Cold Coffee & Brownie", "Cafe Brew \u00b7 \u20B9179 \u00b7 20 min"],
+        ["Rabri Phirni Pot", "Mithai House \u00b7 \u20B999 \u00b7 30 min"]
+      ]
+    },
+    {
+      q: "light and spicy, nothing fried",
+      tags: [["light", 0], ["spicy", 0], ["fried", 1]],
+      h: "Light & spicy picks", n: "6 matches nearby",
+      items: [
+        ["Andhra Chilli Paneer", "Gujju Kitchen \u00b7 \u20B9220 \u00b7 21 min"],
+        ["Pepper Rasam & Rice", "Madras Mess \u00b7 \u20B9140 \u00b7 19 min"],
+        ["Chilli Garlic Soba", "Wok Box \u00b7 \u20B9190 \u00b7 24 min"]
+      ]
+    },
+    {
+      q: "comfort food for a rainy day",
+      tags: [["comfort", 0], ["warm", 0], ["home-style", 0]],
+      h: "Comfort picks for the weather", n: "9 matches nearby",
+      items: [
+        ["Dal \u00b7 2 Roti \u00b7 Jeera Rice", "Sharma Ji Tiffins \u00b7 \u20B9160 \u00b7 18 min"],
+        ["Moong Dal Khichdi", "Gujju Kitchen \u00b7 \u20B9130 \u00b7 20 min"],
+        ["Pakora & Masala Chai", "Punjabi Zaika \u00b7 \u20B9110 \u00b7 22 min"]
+      ]
+    },
+    {
+      q: "high protein, under 300",
+      tags: [["high protein", 0], ["under \u20B9300", 0]],
+      h: "High-protein picks", n: "7 matches nearby",
+      items: [
+        ["Grilled Chicken Bowl", "Fresh Bowl \u00b7 \u20B9250 \u00b7 22 min"],
+        ["Protein Thali", "Punjabi Zaika \u00b7 \u20B9270 \u00b7 25 min"],
+        ["Quinoa & Rajma Salad", "Wok Box \u00b7 \u20B9210 \u00b7 24 min"]
+      ]
+    }
+  ];
+
+  var sq = $("#sq"), qchips = $("#qchips"), parsed = $("#parsed"), sout = $("#searchOut"), qact = 0, typer = null;
+
+  function renderQuery(i, animate) {
+    qact = i;
+    var Q = QUERIES[i];
+    Array.prototype.forEach.call(qchips.children, function (b, k) {
+      b.setAttribute("aria-pressed", k === i ? "true" : "false");
+    });
+
+    parsed.innerHTML = '<p class="plab">Understood as</p><div class="ptags">' +
+      Q.tags.map(function (t) {
+        return '<span class="' + (t[1] ? "neg" : "") + '">' + (t[1] ? "not " : "") + esc(t[0]) + '</span>';
+      }).join("") + '</div>';
+
+    sout.innerHTML = '<div class="rh"><span>' + esc(Q.h) + '</span><em>' + esc(Q.n) + '</em></div>' +
+      Q.items.map(function (it) {
+        return '<div class="r"><span>' + esc(it[0]) + '</span><em>' + esc(it[1]) + '</em></div>';
+      }).join("");
+
+    if (typer) { clearInterval(typer); typer = null; }
+    if (!animate || reduce) { sq.textContent = Q.q; return; }
+    sq.textContent = ""; var c = 0;
+    typer = setInterval(function () {
+      c++; sq.textContent = Q.q.slice(0, c);
+      if (c >= Q.q.length) { clearInterval(typer); typer = null; }
+    }, 26);
+  }
+
+  QUERIES.forEach(function (Q, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = '"' + Q.q + '"';
+    b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function () { renderQuery(i, true); });
+    qchips.appendChild(b);
+  });
+  renderQuery(0, false);
+
+  /* ---- Zomato mood tiles ---- */
+  var MOODS=[
+    {n:"Full-on hungry",h:"Big, filling plates",items:[["Hyderabadi Dum Biryani","Paradise Kitchen \u00b7 \u20B9280 \u00b7 24 min"],["Butter Chicken Thali","Punjabi Zaika \u00b7 \u20B9310 \u00b7 26 min"],["Paneer Combo Meal","Sharma Ji \u00b7 \u20B9240 \u00b7 22 min"]]},
+    {n:"Light bite",h:"Small and easy",items:[["Cucumber Raita Meal","Sharma Ji \u00b7 \u20B9150 \u00b7 22 min"],["Cold Soba Salad","Wok Box \u00b7 \u20B9230 \u00b7 26 min"],["Fresh Fruit Bowl","Fresh Bowl \u00b7 \u20B9120 \u00b7 15 min"]]},
+    {n:"Something spicy",h:"Turn the heat up",items:[["Chettinad Chicken","Madras Mess \u00b7 \u20B9260 \u00b7 25 min"],["Andhra Chilli Paneer","Gujju Kitchen \u00b7 \u20B9220 \u00b7 21 min"],["Schezwan Noodles","Wok Box \u00b7 \u20B9190 \u00b7 19 min"]]},
+    {n:"Something chill",h:"Cooling, for a hot day",items:[["Curd Rice Bowl","Madras Mess \u00b7 \u20B9120 \u00b7 20 min"],["Watermelon Cooler","Fresh Bowl \u00b7 \u20B990 \u00b7 15 min"],["Chilled Kheer Cup","Mithai House \u00b7 \u20B980 \u00b7 28 min"]]},
+    {n:"Ghar ka khana",h:"Tastes like home",items:[["Dal \u00b7 2 Roti \u00b7 Jeera Rice","Sharma Ji Tiffins \u00b7 \u20B9160 \u00b7 18 min"],["Rajma Chawal","Sharma Ji Tiffins \u00b7 \u20B9140 \u00b7 18 min"],["Moong Dal Khichdi","Gujju Kitchen \u00b7 \u20B9130 \u00b7 20 min"]]},
+    {n:"Guilt-free",h:"High protein, lighter",items:[["Grilled Chicken Bowl","Fresh Bowl \u00b7 \u20B9250 \u00b7 22 min"],["Quinoa & Rajma Salad","Wok Box \u00b7 \u20B9210 \u00b7 24 min"],["Protein Thali","Punjabi Zaika \u00b7 \u20B9270 \u00b7 25 min"]]}
+  ];
+  var tiles=$("#tiles"), out=$("#moodOut"), act=4;
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+  function paint(){
+    var m=MOODS[act];
+    out.innerHTML='<div class="rh"><span>'+esc(m.h)+'</span><em>'+m.items.length+' picks \u00b7 by relevance</em></div>'+
+      m.items.map(function(i){return '<div class="r"><span>'+esc(i[0])+'</span><em>'+esc(i[1])+'</em></div>'}).join("");
+    Array.prototype.forEach.call(tiles.children,function(b,i){b.setAttribute("aria-pressed",i===act?"true":"false")});
+  }
+  MOODS.forEach(function(m,i){
+    var b=document.createElement("button");
+    b.type="button"; b.textContent=m.n; b.setAttribute("aria-pressed","false");
+    b.addEventListener("click",function(){act=i;paint()});
+    tiles.appendChild(b);
+  });
+  paint();
+
+  /* ---- Blinkit break-even ---- */
+  var incr=$("#incr"), coin=$("#coin"), MARGIN=25, BREAKAGE=.35;
+  function model(){
+    var ic=+incr.value/100, cv=+coin.value, red=100*(1-BREAKAGE);
+    var net=(red*ic)*MARGIN-red*cv, be=cv/MARGIN;
+    $("#incrV").textContent=incr.value+"%";
+    $("#coinV").textContent="\u20B9"+cv;
+    var n=Math.round(net);
+    $("#net").textContent=(n>=0?"+\u20B9":"\u2212\u20B9")+Math.abs(n).toLocaleString("en-IN");
+    $("#verdict").className="verdict "+(n>=0?"up":"down");
+    $("#vsub").textContent=n>=0?"Profitable at these assumptions.":"Loses money \u2014 coins cost more than the margin they buy.";
+    var bp=Math.round(be*100), now=+incr.value;
+    $("#beV").textContent=(be>1?">100":bp)+"%";
+    var perOrder=net/100, annual=perOrder*500000*365, cr=annual/1e7;
+    $("#annual").textContent=(annual>=0?"\u2248 \u20B9":"\u2248 \u2212\u20B9")+Math.abs(cr).toFixed(1)+" Cr / year";
+    var f=$("#beF"), mk=$("#beM");
+    f.style.width=Math.min(100,now)+"%";
+    f.style.background=(now>=bp&&be<=1)?"var(--g-mint)":"var(--loss)";
+    mk.style.left=Math.min(100,bp)+"%";
+    mk.style.display=be>1?"none":"block";
+  }
+  incr.addEventListener("input",model); coin.addEventListener("input",model); model();
+})();
+</script>
 </body>
-
 </html>
